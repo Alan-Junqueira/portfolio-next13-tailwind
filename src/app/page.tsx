@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main
       className="
-        flex flex-col sm:grid sm:grid-cols-2 
+        flex flex-col sm:grid sm:grid-cols-2
         justify-between items-center 
         gap-4 md:gap-6 lg:gap-8
         px-4 md:px-6 lg:px-8 py-10

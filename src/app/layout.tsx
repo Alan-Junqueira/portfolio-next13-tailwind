@@ -18,11 +18,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html
-      className={`${ibmPlexMono.className} bg-gray-900 text-green-600`}
-      lang="en"
-    >
-      <body>
+    <html lang="en">
+      <body className={`${ibmPlexMono.className} bg-gray-900 text-green-600`}>
         <Header />
         <div className="pt-20">{children}</div>
       </body>

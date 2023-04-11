@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { DevAnimation } from '@/components/DevAnimation'
 import { LinkContact } from '@/components/LinkContact'
 import { SocialsHeader } from '@/components/SocialsHeader'
+import { LinkDownloadCv } from '../LinkDoneloadCv'
 
 export const HomeMain = () => {
   return (
@@ -49,22 +49,7 @@ export const HomeMain = () => {
         </p>
         <div className="flex gap-4 mt-10">
           <LinkContact />
-          <Link
-            href="/assets/files/Curriculo.pdf"
-            target="_blank"
-            className="
-          flex gap-2 items-center 
-          text-lg
-          w-fit 
-          mt-6 py-2 px-4 rounded-lg
-          bg-fuchsia-700  hover:bg-gray-900
-          text-green-300 hover:text-green-500
-          border-2 border-green-300 hover:border-fuchsia-700
-          transition-all ease-in duration-200 
-        "
-          >
-            Download CV
-          </Link>
+          <LinkDownloadCv />
         </div>
       </div>
       <div className="relative h-60 flex items-center justify-center mt-10 sm:mt-0 mb-10 sm:mb-0">

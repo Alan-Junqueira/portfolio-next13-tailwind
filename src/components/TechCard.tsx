@@ -44,8 +44,6 @@ export const TechCard = ({
     sass: 'https://sass-lang.com/',
   }
 
-  console.log(mainColorBg)
-
   return (
     <div
       {...props}
@@ -102,11 +100,11 @@ export const TechCard = ({
         <span className="self-center uppercase text-xl font-bold">
           {techName.toUpperCase()}
         </span>
-        <p className="self-center text-sm font-medium truncate-two">
+        <p className="self-center text-sm text-center font-medium truncate-two">
           {description}
         </p>
         <Link
-          className={`self-center rounded-2xl px-[5px] py-[10px] uppercase font-bold text-sm text-stone-50 w-32`}
+          className={`self-center rounded-2xl px-[5px] py-[10px] uppercase text-center font-bold text-sm text-stone-50 w-32`}
           href={externalLinks[`${techLabel.toLowerCase()}`]}
           target="_blank"
           style={{ backgroundColor: iconColor }}

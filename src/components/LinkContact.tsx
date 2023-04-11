@@ -1,10 +1,13 @@
-'use client'
 import { LinkIcon } from './LinkIcon'
-import { Envelope } from 'phosphor-react'
+import { BsFillEnvelopeAtFill } from 'react-icons/bs'
 
 export const LinkContact = () => {
   return (
-    <LinkIcon passHref href="/contact" iconLeft={() => <Envelope />}>
+    <LinkIcon
+      passHref
+      href="/contact"
+      iconLeft={() => <BsFillEnvelopeAtFill />}
+    >
       Contato
     </LinkIcon>
   )

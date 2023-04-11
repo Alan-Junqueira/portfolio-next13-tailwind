@@ -11,9 +11,9 @@ import 'swiper/css/navigation'
 import { Autoplay, Pagination, Navigation } from 'swiper'
 
 import './styles.css'
-import { TechCard } from '@/components/TechCard'
+import Image from 'next/image'
 
-export const HomeTechSlider = () => {
+export const HomeCertificatesSlider = () => {
   return (
     <section
       className="
@@ -27,26 +27,19 @@ export const HomeTechSlider = () => {
           mb-10
           "
       >
-        Tech Stack
+        Certificados
       </h2>
       <Swiper
-        breakpoints={{
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-          1440: {
-            slidesPerView: 4,
-          },
-        }}
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={8}
         loop={true}
         pagination={{
           clickable: true,
-          // el: '.teste',
+        }}
+        breakpoints={{
+          800: {
+            slidesPerView: 2,
+          },
         }}
         autoplay={{
           delay: 2500,
@@ -54,20 +47,20 @@ export const HomeTechSlider = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper h-full w-full overflow-hidden pb-10"
+        className="mySwiper h-full w-full overflow-hidden pb-10 flex items-center justify-center"
       >
-        {aboutMe.programmingLanguages.map((language) => (
+        {aboutMe.certificates.map((certificate) => (
           <SwiperSlide
-            key={language.name}
-            className="rounded-lg h-full bg-stone-50"
+            key={certificate.name}
+            className="rounded-lg bg-stone-50"
           >
-            <TechCard
-              description={language.description}
-              iconColor={language.mainColor}
-              mainColorBg={`bg-techs-${language.label}`}
-              mainColorBorder={`border-techs-${language.label}`}
-              techName={language.name}
-              techLabel={language.label}
+            <Image
+              alt={certificate.alt}
+              src={certificate.banner}
+              width={1080}
+              height={650}
+              className="lg:max-h-96"
+              quality={100}
             />
           </SwiperSlide>
         ))}

@@ -14,7 +14,7 @@ export const DevAnimation = () => {
         2000,
 
         () => {
-          console.log('Sequence completed') // Place optional callbacks anywhere in the array
+          // Place optional callbacks anywhere in the array
         },
       ]}
       wrapper="span"

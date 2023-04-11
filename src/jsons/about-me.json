@@ -218,29 +218,49 @@
   ],
   "certificates": [
     {
-      "banner": "https://drive.google.com/uc?export=view&id=1hJ8UDHAmq7O2NzbmMbBgXP7NEs90aMNE",
+      "banner": "/assets/images/certificates/b7-bd.jpg",
       "name": "Banco de Dados",
-      "alt": "Certificado de Banco de Dados"
+      "alt": "Certificado de Banco de Dados - B7web"
     },
     {
-      "banner": "https://drive.google.com/uc?export=view&id=1j8n1qiu_vhuS0gMEWq4kyipX61e5Qsib",
+      "banner": "/assets/images/certificates/b7-react.jpg",
       "name": "React Js",
-      "alt": "Certificado de React Js"
+      "alt": "Certificado de React Js - B7web"
     },
     {
-      "banner": "https://drive.google.com/uc?export=view&id=190loFgI7whzi_VoyE5csb3B6P2Mjv720",
+      "banner": "/assets/images/certificates/b7-typescript.jpg",
       "name": "Typescript",
-      "alt": "Certificado de Typescript"
+      "alt": "Certificado de Typescript - B7web"
     },
     {
-      "banner": "https://drive.google.com/uc?export=view&id=1EBjUhESQM0EczvdunJyweDl57GQ8152k",
+      "banner": "/assets/images/certificates/b7-next.jpg",
       "name": "Next Js",
-      "alt": "Certificado de Next js"
+      "alt": "Certificado de Next js - B7web"
     },
     {
-      "banner": "https://drive.google.com/uc?export=view&id=1xX2Y0dGl1YLu-suNeI9t-5XowgAlJgGU",
+      "banner": "/assets/images/certificates/b7-node.jpg",
       "name": "Node Js",
-      "alt": "Certificado de Node Js"
+      "alt": "Certificado de Node Js - B7web"
+    },
+    {
+      "banner": "/assets/images/certificates/aws-impulso.png",
+      "name": "AWS",
+      "alt": "Bootcamp Aws Impulso - DIO"
+    },
+    {
+      "banner": "/assets/images/certificates/discover-conectar.png",
+      "name": "Conectar",
+      "alt": "Certificado Discover Conectar - Rocketseat"
+    },
+    {
+      "banner": "/assets/images/certificates/discover-especializar.png",
+      "name": "Especializar",
+      "alt": "Certificado Discover Especializar - Rocketseat"
+    },
+    {
+      "banner": "/assets/images/certificates/discover-fundamentar.png",
+      "name": "Fundamentar",
+      "alt": "Certificado Discover Fundamentar - Rocketseat"
     }
   ]
 }

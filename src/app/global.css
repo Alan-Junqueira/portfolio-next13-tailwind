@@ -6,9 +6,7 @@
   .backdrop-saturate-blur {
     backdrop-filter: saturate(180%) blur(5px);
   }
-}
-
-@layer utilities {
+  
   .truncate-two {
     overflow: hidden; 
     text-overflow: ellipsis; 
@@ -18,7 +16,30 @@
   }
 }
 
+.swiper-button-prev, .swiper-button-next {
+  color: rgb(162, 28, 175);
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(162, 28, 175)
+}
+
 ::selection {
   background-color: rgb(162, 28, 175);
   color: rgb(229, 231, 235);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(162, 28, 175);
+  border-left: 2px solid #4a044e;
+  border-right: 2px solid #4a044e;
+}
+
+*::-webkit-scrollbar-track {
+  background: #4a044e;
 }

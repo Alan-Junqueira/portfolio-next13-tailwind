@@ -1,0 +1,246 @@
+{
+  "name": "Alan Junqueira",
+  "informatinsAboutMe": [
+    {
+      "label": "Idade",
+      "description": "27"
+    },
+    {
+      "label": "Residência",
+      "description": "Brasil"
+    },
+    {
+      "label": "Cidade",
+      "description": "Caldas Novas"
+    },
+    {
+      "label": "Estado",
+      "description": "Goias"
+    }
+  ],
+  "programmingLanguages": [
+    {
+      "label": "html",
+      "name": "Html",
+      "description": "HTML é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.",
+      "mainColor": "#FC490B",
+      "domain": 90
+    },
+    {
+      "label": "css",
+      "name": "Css",
+      "description": "Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web..",
+      "mainColor": "#264DE4",
+      "domain": 90
+    },
+    {
+      "label": "javascript",
+      "name": "Javascript",
+      "description": "JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.",
+      "mainColor": "#FFDE25",
+      "domain": 85
+    },
+    {
+      "label": "git",
+      "name": "Git",
+      "description": "Git é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.",
+      "mainColor": "#DD4C35",
+      "domain": 75
+    },
+    {
+      "label": "reactJs",
+      "name": "React Js",
+      "description": "React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web..",
+      "mainColor": "#00D8FF",
+      "domain": 85
+    },
+    {
+      "label": "typescript",
+      "name": "Typescript",
+      "description": "TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem..",
+      "mainColor": "#017ACB",
+      "domain": 70
+    },
+    {
+      "label": "nextJs",
+      "name": "Next Js",
+      "description": "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+      "mainColor": "#000000",
+      "domain": 75
+    },
+    {
+      "label": "nodeJs",
+      "name": "Node Js",
+      "description": "Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.",
+      "mainColor": "#8CC84B",
+      "domain": 50
+    },
+    {
+      "label": "github",
+      "name": "Git Hub",
+      "description": "GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.",
+      "mainColor": "#000000",
+      "domain": 70
+    },
+    {
+      "label": "sass",
+      "name": "Sass",
+      "description": "Sass é uma linguagem de folhas de estilo concebida inicialmente por Hampton Catlin e desenvolvida por Natalie Weizenbaum. ",
+      "mainColor": "#EC407A",
+      "domain": 70
+    }
+  ],
+  "portfolio": [
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1FnFvbjUdzuWhIxPGDeV-koOmWt1F4pGT",
+      "name": "b7 Delivery",
+      "ghLink": "https://github.com/Alan-Junqueira/b7Delivery",
+      "siteLink": "https://b7delivery-amber.vercel.app/b7burger"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=16mzRakniV0BG_-l62-Z7Y-snhKKqJ0pP",
+      "name": "Doctor Care",
+      "ghLink": "https://github.com/Alan-Junqueira/doctorcare",
+      "siteLink": "https://alan-junqueira.github.io/doctorcare/"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1_u0wX2MYd7INzD9pl5E98jQXlvfpmtpR",
+      "name": "Formulário Mult Etapas",
+      "ghLink": "https://github.com/Alan-Junqueira/formulario-mult-etapas",
+      "siteLink": "https://formulario-mult-etapas.vercel.app/"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1xWPp65hLIm-xiVzI9QHNS_MAth2AQtXQ",
+      "name": "Rpg Game",
+      "ghLink": "https://github.com/Alan-Junqueira/rpg-game-b7web",
+      "siteLink": "https://rpg-game-b7web.vercel.app/"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1YyvhgiHFZlPukBAnOdWXrDyrXxCHQiuo",
+      "name": "OLX Clone",
+      "ghLink": "https://github.com/Alan-Junqueira/b7Web-Clone-OLX-Front-End",
+      "siteLink": "https://clone-olx-b7web.vercel.app/"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1P7VYvu4l_saOQBgTF09Mww6OcaTcyjk1",
+      "name": "Dev Memory",
+      "ghLink": "https://github.com/Alan-Junqueira/-react-memory-game",
+      "siteLink": "https://react-memory-game-b7web.vercel.app/"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1BfFKHs-2PasFSfREKgKHxIqxDbJ28rlS",
+      "name": "IMC Calculator",
+      "ghLink": "https://github.com/Alan-Junqueira/imc-calculator",
+      "siteLink": "https://imc-calculator-sable.vercel.app/"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1cxaLxdlBLVbQPBUIQsOVkctBr-WNUEg-",
+      "name": "Javascript Notes",
+      "ghLink": "https://github.com/Alan-Junqueira/javascript_note",
+      "siteLink": "https://javascript-note.vercel.app/"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1DJ_ueVV1DCxCNKfdm7VimV3Mb4ezxrii",
+      "name": "Dt Money",
+      "ghLink": "https://github.com/Alan-Junqueira/dtmoney",
+      "siteLink": "https://dtmoney-pi-self.vercel.app/"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1qwt20TOsvIKC2HaJA4nCRfPKkUs8SMKg",
+      "name": "Animais Fantasticos",
+      "ghLink": "https://github.com/Alan-Junqueira/Animais-Fantasticos",
+      "siteLink": "https://alan-junqueira.github.io/Animais-Fantasticos/"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1xwvb3QKw1OyBIt97mbOibQfGeC7AgJpS",
+      "name": "Dogs",
+      "ghLink": "https://github.com/Alan-Junqueira/ProjetoDogs-Origamid",
+      "siteLink": "https://alan-junqueira.github.io/ProjetoDogs-Origamid/"
+    }
+  ],
+  "idiomsDomain": [
+    {
+      "idiom": "Português",
+      "domain": 100
+    },
+    {
+      "idiom": "Inglês",
+      "domain": 75
+    },
+    {
+      "idiom": "Espanhol",
+      "domain": 50
+    }
+  ],
+  "profissionalExperiences": [
+    {
+      "company": "Roma Empreendimentos E Turismo Ltda",
+      "description": "Período de Jovem Aprendiz, trabalhei na parte de organização de estoque, atendimento de de produtos e conferência de Nota Fiscal",
+      "role": "Auxiliar de escritório em geral",
+      "initialPeriod": 2012,
+      "endPeriod": 2013
+    },
+    {
+      "company": "Tarcisio Augusto Silva Araruna",
+      "description": "Na carteira esta fotografo, mas além de tirar as fotos, dependendo do lugar que estava trabalhando, fazia as vendas, tinha que fazer papel de guia, editava as fotos e organizva o mural de fotos para vendas",
+      "role": "Fotógrafo",
+      "initialPeriod": 2013,
+      "endPeriod": 2014
+    },
+    {
+      "company": "Viva Caldas Negócios Imobiliarios Ltda",
+      "description": "Trabalhei na captação de clientes para oferecer frações imobiliarias, fazia o convite ára o cliente oferecendo alguns brindes com o objetivo de, sem compromisso, levar o cliente para conhecer meu produto",
+      "role": "Promotor de Marketing",
+      "endPeriod": 2014,
+      "initialPeriod": 2014
+    },
+    {
+      "company": "S.P.E Resort do Lago Caldas Novas Ltda",
+      "description": "Trabalhei na captação de clientes para oferecer frações imobiliarias, fazia o convite ára o cliente oferecendo alguns brindes com o objetivo de, sem compromisso, levar o cliente para conhecer meu produto, nesse período fui referência e logo fui promovido para Supervisor de Marketing",
+      "role": "Promotor de Marketing",
+      "initialPeriod": 2014,
+      "endPeriod": 2015
+    },
+    {
+      "company": "S.P.E Resort do Lago Caldas Novas Ltda",
+      "description": "Liderei uma equipe de Promotores de Marketing, que no seu auge chegou a ter mais de 50 pessoas, nesse período, fazia toda parte de suporte, disponibilizando todo material necessário para uma boa execução do serviço, aos com menos experiência, cooperei para que se desenvolvessem na profissão pasasndo um pouco do meu conhecimento na área",
+      "role": "Supervisor de Marketing",
+      "initialPeriod": 2015,
+      "endPeriod": 2020
+    },
+    {
+      "company": "Autônomo",
+      "description": "Decidi mudar de área e trabalhar de maneira remota, visando liberdade de geolocalização, busquei experiência como editor, streamer, pro player de esports, em uma temporada(período de férias) voltei como Supervisor de Marketing e desde então estou estudando programação em busca de uma oportunidade",
+      "role": "Autônomo - Atual",
+      "initialPeriod": 2021,
+      "endPeriod": 2022
+    }
+  ],
+  "certificates": [
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1hJ8UDHAmq7O2NzbmMbBgXP7NEs90aMNE",
+      "name": "Banco de Dados",
+      "alt": "Certificado de Banco de Dados"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1j8n1qiu_vhuS0gMEWq4kyipX61e5Qsib",
+      "name": "React Js",
+      "alt": "Certificado de React Js"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=190loFgI7whzi_VoyE5csb3B6P2Mjv720",
+      "name": "Typescript",
+      "alt": "Certificado de Typescript"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1EBjUhESQM0EczvdunJyweDl57GQ8152k",
+      "name": "Next Js",
+      "alt": "Certificado de Next js"
+    },
+    {
+      "banner": "https://drive.google.com/uc?export=view&id=1xX2Y0dGl1YLu-suNeI9t-5XowgAlJgGU",
+      "name": "Node Js",
+      "alt": "Certificado de Node Js"
+    }
+  ]
+}

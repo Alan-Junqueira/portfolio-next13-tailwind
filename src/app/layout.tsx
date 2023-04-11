@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import { ReactNode } from 'react'
 
 import './global.css'
-import { Header } from './components/partials/Header'
+import { Header } from '@/components/partials/Header'
 
 const ibmPlexMono = IBM_Plex_Mono({
   weight: ['300', '400', '500', '600', '700'],
@@ -12,8 +12,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Home',
-  description: 'Portifólio Alan Junqueira | Home',
+  title: 'Início',
+  description: 'Portfólio Alan Junqueira | Home',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

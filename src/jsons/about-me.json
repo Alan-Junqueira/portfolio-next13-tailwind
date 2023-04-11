@@ -88,6 +88,13 @@
       "description": "Sass é uma linguagem de folhas de estilo concebida inicialmente por Hampton Catlin e desenvolvida por Natalie Weizenbaum. ",
       "mainColor": "#EC407A",
       "domain": 70
+    },
+    {
+      "label": "prisma",
+      "name": "Prisma ORM",
+      "description": "O Prisma é um ORM NodeJS que consiste em três ferramentas principais: Prisma Client: um construtor de consultas gerado automaticamente e fortemente tipado para o Node. js e o TypeScript.. ",
+      "mainColor": "#2d3748",
+      "domain": 50
     }
   ],
   "portfolio": [

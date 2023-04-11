@@ -10,7 +10,7 @@ import {
   DiSass,
 } from 'react-icons/di'
 import { GrReactjs } from 'react-icons/gr'
-import { SiTypescript } from 'react-icons/si'
+import { SiTypescript, SiPrisma } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
 
 interface ITechCard extends HTMLAttributes<HTMLDivElement> {
@@ -42,6 +42,7 @@ export const TechCard = ({
     nodejs: 'https://nodejs.org/en/',
     github: 'https://github.com/',
     sass: 'https://sass-lang.com/',
+    prisma: 'https://www.prisma.io/',
   }
 
   return (
@@ -92,6 +93,7 @@ export const TechCard = ({
             <AiFillGithub size={70} color={iconColor} />
           )}
           {techLabel === 'sass' && <DiSass size={70} color={iconColor} />}
+          {techLabel === 'prisma' && <SiPrisma size={70} color={iconColor} />}
         </div>
       </div>
 

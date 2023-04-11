@@ -15,13 +15,16 @@ export const HomeMain = () => {
       px-4 md:px-6 lg:px-8 py-10
       relative
       border-y-2 border-emerald-500
+      
     "
     >
       <div className="absolute inset-0 -z-10 opacity-20">
         <Image
           alt=""
           src="/assets/images/home-particles.png"
-          fill
+          width={70}
+          height={70}
+          quality={100}
           className="object-cover"
         />
       </div>
@@ -61,7 +64,7 @@ export const HomeMain = () => {
             sm:w-fit sm:h-full 
             bg-black bg-opacity-30
             px-2 py-1
-            flex sm:flex-col items-center justify-center
+            hidden sm:flex sm:flex-col items-center justify-center
           "
         >
           <SocialsHeader />

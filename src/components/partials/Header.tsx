@@ -20,7 +20,7 @@ export const Header = () => {
         />
       </div>
 
-      <nav className="hidden sm:flex items-center gap-6">
+      <nav className="flex items-center gap-6">
         <NavItem text="Início" href={'/'} />
         <NavItem text="Projetos" href={'/projects'} />
         <NavItem text="Contato" href={'/contact'} />

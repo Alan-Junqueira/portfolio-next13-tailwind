@@ -18,16 +18,7 @@ export const HomeMain = () => {
       
     "
     >
-      <div className="absolute inset-0 -z-10 opacity-20">
-        <Image
-          alt=""
-          src="/assets/images/home-particles.png"
-          width={70}
-          height={70}
-          quality={100}
-          className="object-cover"
-        />
-      </div>
+      <div className="absolute inset-0 -z-10 opacity-20 bg-[url('/assets/images/home-particles.png')]"></div>
       <div>
         <p className=" text-gray-200 text-xl mb-4">
           Seja bem vindo{' '}

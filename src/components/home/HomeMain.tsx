@@ -15,11 +15,10 @@ export const HomeMain = () => {
       px-4 md:px-6 lg:px-8 py-10
       relative
       border-y-2 border-emerald-500
-      
     "
     >
       <div className="absolute inset-0 -z-10 opacity-20 bg-[url('/assets/images/home-particles.png')]"></div>
-      <div>
+      <div className="order-2 sm:order-1">
         <p className=" text-gray-200 text-xl mb-4">
           Seja bem vindo{' '}
           <i className="font-bold text-transparent bg-gradient-to-br from-fuchsia-700 to-pink-500 bg-clip-text ">
@@ -46,7 +45,7 @@ export const HomeMain = () => {
           <LinkDownloadCv />
         </div>
       </div>
-      <div className="relative h-60 flex items-center justify-center mt-10 sm:mt-0 mb-10 sm:mb-0">
+      <div className="relative h-60 flex items-center justify-center mt-10 sm:mt-0 mb-10 sm:mb-0 order-1 sm:order-2">
         <div
           className="
             absolute -bottom-10 left-0 right-0
@@ -66,7 +65,7 @@ export const HomeMain = () => {
           alt="Minha imagem de perfil"
           width={450}
           height={450}
-          className="rounded-full w-fit h-full object-contain"
+          className="rounded-full w-fit h-full object-contain bg-fuchsia-900 p-1"
           priority
           draggable={false}
         />

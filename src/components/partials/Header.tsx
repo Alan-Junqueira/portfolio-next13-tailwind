@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { NavItem } from '../NavItem'
+import { MenuBurger } from './MenuBurger'
 
 export const Header = () => {
   return (
@@ -20,11 +21,13 @@ export const Header = () => {
         />
       </div>
 
-      <nav className="flex items-center gap-6">
+      <nav className="hidden sm:flex items-center gap-6">
         <NavItem text="Início" href={'/'} />
         <NavItem text="Projetos" href={'/projects'} />
         <NavItem text="Contato" href={'/contact'} />
       </nav>
+
+      <MenuBurger />
     </header>
   )
 }

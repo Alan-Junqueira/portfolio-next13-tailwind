@@ -11,8 +11,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Início',
-  description: 'Portfólio Alan Junqueira | Home',
+  title: 'Login',
+  description: 'Auth | Login',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

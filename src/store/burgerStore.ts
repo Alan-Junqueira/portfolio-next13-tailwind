@@ -2,7 +2,6 @@ import { create } from 'zustand'
 
 type TBurgerMenuState = {
   isMenuBurgerOpen: boolean
-  selectedMenu: '/' | 'projects' | 'contact'
 }
 
 type TBurgerMenuActions = {
@@ -18,7 +17,6 @@ export const useBurgerMenuStore = create<IBurgerMenuStore>(
   (set, get, actions) => ({
     state: {
       isMenuBurgerOpen: false,
-      selectedMenu: '/',
     },
     actions: {
       toggleMenuBurger: () => {

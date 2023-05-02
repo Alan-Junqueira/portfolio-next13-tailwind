@@ -9,7 +9,11 @@ export default function PanelPage() {
   console.log(user)
   return (
     <div>
-      {user ? <p>user</p> : <Oauth />}
+      {user?.email === process.env.NEXT_PUBLIC_AUTHORIZED_EMAIL ? (
+        <p>user</p>
+      ) : (
+        <Oauth />
+      )}
       <h1>Panel</h1>
     </div>
   )

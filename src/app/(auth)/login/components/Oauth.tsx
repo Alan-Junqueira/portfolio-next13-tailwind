@@ -2,20 +2,11 @@
 
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth'
 
-import { z } from 'zod'
-
 import { auth, firestore } from '@/libs/firebase'
 import { useEffect } from 'react'
 import { User } from 'firebase/auth'
 import { doc, setDoc } from 'firebase/firestore'
 import { useRouter } from 'next/navigation'
-
-const loginFormSchema = z.object({
-  username: z.string().email(),
-  password: z.string(),
-})
-
-type LoginFormInputs = z.infer<typeof loginFormSchema>
 
 export const Oauth = () => {
   const router = useRouter()
@@ -35,7 +26,13 @@ export const Oauth = () => {
       )
       validEmail && createUserDocument(userCredentials.user)
       validEmail && router.push('/panel')
+
+      console.log(error)
     }
-  }, [router, userCredentials])
-  return <button onClick={() => signInWithGoogle()}>Google</button>
+  }, [error, router, userCredentials])
+  return (
+    <button onClick={() => signInWithGoogle()} disabled={loading}>
+      Google
+    </button>
+  )
 }

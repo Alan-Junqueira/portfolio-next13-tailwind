@@ -10,9 +10,16 @@ import { MdLanguage } from 'react-icons/md'
 import { BsBodyText } from 'react-icons/bs'
 import { IoShareSocialOutline } from 'react-icons/io5'
 import { useAuthState } from 'react-firebase-hooks/auth'
+import { useDashboardStore } from '@/store/dashboardStore'
+import { DashboardMenuItem } from './components/DashboardMenuItem'
+import { PortfolioConfig } from './components/PortfolioConfig'
 
 export default function PanelPage() {
   const [user, loading] = useAuthState(auth)
+  const {
+    state: { openedMenu },
+    actions: { changeOpenedMenu },
+  } = useDashboardStore()
   console.log(user)
   return (
     <>
@@ -41,130 +48,59 @@ export default function PanelPage() {
             </div>
 
             <ul className="flex flex-col ">
-              <li
-                className="
-                  flex justify-between 
-                  px-4 py-3
-                  text-md
-                  cursor-pointer
-                  border-b border-b-green-600
-                  hover:bg-purple
-                  text-green-500 hover:text-green-400
-                  hover:bg-fuchsia-900
-                  hover:font-bold
-                  "
-              >
-                <FaBriefcase size={24} /> Portfolio
-              </li>
-              <li
-                className="
-                  flex justify-between 
-                  px-4 py-3
-                  text-md
-                  cursor-pointer
-                  border-b border-b-green-600
-                  hover:bg-purple
-                  text-green-500 hover:text-green-400
-                  hover:bg-fuchsia-900
-                  hover:font-bold
-                  "
-              >
-                <TbCertificate size={24} /> Certificados
-              </li>
-              <li
-                className="
-                  flex justify-between 
-                  px-4 py-3
-                  text-md
-                  cursor-pointer
-                  border-b border-b-green-600
-                  hover:bg-purple
-                  text-green-500 hover:text-green-400
-                  hover:bg-fuchsia-900
-                  hover:font-bold
-                  "
-              >
-                <GiTargetShot size={24} /> Tech Stack
-              </li>
-              <li
-                className="
-                  flex justify-between 
-                  px-4 py-3
-                  text-md
-                  cursor-pointer
-                  border-b border-b-green-600
-                  hover:bg-purple
-                  text-green-500 hover:text-green-400
-                  hover:bg-fuchsia-900
-                  hover:font-bold
-                  "
-              >
-                <MdLanguage size={24} /> Idiomas
-              </li>
-              <li
-                className="
-                  flex justify-between 
-                  px-4 py-3
-                  text-md
-                  cursor-pointer
-                  border-b border-b-green-600
-                  hover:bg-purple
-                  text-green-500 hover:text-green-400
-                  hover:bg-fuchsia-900
-                  hover:font-bold
-                  "
-              >
-                <GiFamilyHouse size={24} /> Residencia
-              </li>
-              <li
-                className="
-                  flex justify-between 
-                  px-4 py-3
-                  text-md
-                  cursor-pointer
-                  border-b border-b-green-600
-                  hover:bg-purple
-                  text-green-500 hover:text-green-400
-                  hover:bg-fuchsia-900
-                  hover:font-bold
-                  "
-              >
-                <GiSoapExperiment size={24} /> Experiências
-              </li>
-              <li
-                className="
-                  flex justify-between 
-                  px-4 py-3
-                  text-md
-                  cursor-pointer
-                  border-b border-b-green-600
-                  hover:bg-purple
-                  text-green-500 hover:text-green-400
-                  hover:bg-fuchsia-900
-                  hover:font-bold
-                  "
-              >
-                <IoShareSocialOutline size={24} /> Social Links
-              </li>
-              <li
-                className="
-                  flex justify-between 
-                  px-4 py-3
-                  text-md
-                  cursor-pointer
-                  border-b border-b-green-600
-                  hover:bg-purple
-                  text-green-500 hover:text-green-400
-                  hover:bg-fuchsia-900
-                  hover:font-bold
-                  "
-              >
-                <BsBodyText size={24} /> Texts
-              </li>
+              <DashboardMenuItem
+                icon={() => <FaBriefcase size={24} />}
+                isActive={openedMenu === 'portfolio'}
+                menuName="Portfolio"
+                onClick={() => changeOpenedMenu('portfolio')}
+              />
+              <DashboardMenuItem
+                icon={() => <TbCertificate size={24} />}
+                menuName="Certificados"
+                onClick={() => changeOpenedMenu('certificate')}
+                isActive={openedMenu === 'certificate'}
+              />
+              <DashboardMenuItem
+                icon={() => <GiTargetShot size={24} />}
+                menuName="Tech Stack"
+                onClick={() => changeOpenedMenu('techStack')}
+                isActive={openedMenu === 'techStack'}
+              />
+              <DashboardMenuItem
+                icon={() => <MdLanguage size={24} />}
+                menuName="Idiomas"
+                onClick={() => changeOpenedMenu('idioms')}
+                isActive={openedMenu === 'idioms'}
+              />
+              <DashboardMenuItem
+                icon={() => <GiFamilyHouse size={24} />}
+                menuName="Residencia"
+                onClick={() => changeOpenedMenu('residence')}
+                isActive={openedMenu === 'residence'}
+              />
+              <DashboardMenuItem
+                icon={() => <GiSoapExperiment size={24} />}
+                menuName="Experiências"
+                onClick={() => changeOpenedMenu('experience')}
+                isActive={openedMenu === 'experience'}
+              />
+              <DashboardMenuItem
+                icon={() => <IoShareSocialOutline size={24} />}
+                menuName="Social Links"
+                onClick={() => changeOpenedMenu('social')}
+                isActive={openedMenu === 'social'}
+              />
+              <DashboardMenuItem
+                icon={() => <BsBodyText size={24} />}
+                menuName="Texts"
+                onClick={() => changeOpenedMenu('texts')}
+                isActive={openedMenu === 'texts'}
+              />
             </ul>
           </aside>
           <div className="flex flex-col pl-56">
-            <p>teste</p>
+            <p>{openedMenu}</p>
+            {openedMenu === 'portfolio' && <PortfolioConfig />}
           </div>
         </div>
       ) : (

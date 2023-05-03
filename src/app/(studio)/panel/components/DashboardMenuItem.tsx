@@ -20,11 +20,11 @@ export const DashboardMenuItem = ({
         px-4 py-3
         text-md
         cursor-pointer
-        border-b border-b-green-600
+        border border-green-600
         hover:bg-purple
         text-green-500 hover:text-green-400
-        ${isActive && 'bg-fuchsia-950 font-bold'}
-        hover:bg-fuchsia-900
+        ${isActive && 'bg-fuchsia-900 font-bold'}
+        hover:bg-fuchsia-950
         hover:font-bold
         ${props.className}
       `}

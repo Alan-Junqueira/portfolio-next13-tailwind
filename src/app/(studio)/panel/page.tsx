@@ -31,10 +31,17 @@ export default function PanelPage() {
             className="
             fixed top-0 left-0 bottom-0 
             h-screen w-56 
-            overflow-y-scroll"
+            overflow-y-scroll z-10"
           >
-            <div className="flex justify-between items-center bg-neutral-100 px-2 py-2 border-b-4 border-b-emerald-500">
-              <div className="w-10 h-10 relative">
+            <div
+              className="
+                flex justify-between items-center 
+                bg-neutral-100 
+                px-2 py-2 
+                border-4 border-emerald-500 
+              "
+            >
+              <div className="w-10 h-10 relative ">
                 <Image
                   className="absolute"
                   alt="logo"
@@ -42,7 +49,7 @@ export default function PanelPage() {
                   fill
                 />
               </div>
-              <span className="text-2xl text-fuchsia-700 font-bold">
+              <span className="text-2xl text-fuchsia-700 font-bold ">
                 Dashboard
               </span>
             </div>
@@ -98,8 +105,7 @@ export default function PanelPage() {
               />
             </ul>
           </aside>
-          <div className="flex flex-col pl-56">
-            <p>{openedMenu}</p>
+          <div className="flex flex-col ml-56 pb-8 bg-neutral-100">
             {openedMenu === 'portfolio' && <PortfolioConfig />}
           </div>
         </div>

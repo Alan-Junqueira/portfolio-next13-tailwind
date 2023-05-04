@@ -105,7 +105,7 @@ export default function PanelPage() {
               />
             </ul>
           </aside>
-          <div className="flex flex-col ml-56 pb-8 bg-neutral-100">
+          <div className="flex flex-col ml-56 pb-8 bg-neutral-100 min-h-screen">
             {openedMenu === 'portfolio' && <PortfolioConfig />}
           </div>
         </div>

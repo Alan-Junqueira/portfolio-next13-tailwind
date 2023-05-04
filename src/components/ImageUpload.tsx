@@ -1,22 +1,34 @@
 import Image from 'next/image'
-import { ChangeEvent, useRef } from 'react'
+import { ChangeEvent, useEffect, useRef } from 'react'
 
 interface IImageUpload {
   selectedFile?: string
   setSelectedFile: (value: string) => void
   onSelectImage: (e: ChangeEvent<HTMLInputElement>) => void
+  removeImage?: boolean
+  handleRemoveImage?: (remove: boolean) => void
 }
 
 export const ImageUpload = ({
   onSelectImage,
   setSelectedFile,
   selectedFile,
+  removeImage,
+  handleRemoveImage,
 }: IImageUpload) => {
   const selectedFileRef = useRef<HTMLInputElement>(null)
+  const removeButtonRef = useRef<HTMLButtonElement>(null)
 
   const handleUploadClick = () => {
     document.getElementById('file-input')?.click()
   }
+
+  useEffect(() => {
+    if (removeImage) {
+      removeButtonRef.current?.click()
+      handleRemoveImage && handleRemoveImage(false)
+    }
+  }, [handleRemoveImage, removeImage])
 
   return (
     <div className="flex items-center justify-center flex-col w-full">
@@ -27,6 +39,7 @@ export const ImageUpload = ({
             <button
               className="bg-gray-900 px-6 py-2 rounded font-bold"
               onClick={() => setSelectedFile('')}
+              ref={removeButtonRef}
             >
               Remover
             </button>

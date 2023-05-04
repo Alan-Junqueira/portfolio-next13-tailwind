@@ -4,5 +4,6 @@ export type TPortfolio = {
   githubLink: string
   siteLink: string
   description: string
+  yearOfCreation: number
   techs: string[]
 }

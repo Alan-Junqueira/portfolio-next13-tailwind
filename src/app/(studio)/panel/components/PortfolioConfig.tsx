@@ -4,17 +4,20 @@ import { firestore, storage } from '@/libs/firebase'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { addDoc, collection, updateDoc } from 'firebase/firestore'
 import { ref, uploadString, getDownloadURL } from 'firebase/storage'
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
-import { AiOutlineProject } from 'react-icons/ai'
+import { AiFillGithub, AiOutlineGlobal, AiOutlineProject } from 'react-icons/ai'
 import { ImageUpload } from '@/components/ImageUpload'
+import { TbAtomOff } from 'react-icons/tb'
+import { BsFillCalendarWeekFill } from 'react-icons/bs'
 
 export const portfolioFormSchema = z.object({
   projectName: z.string().min(1),
   githubLink: z.string().min(1),
   siteLink: z.string().min(1),
   description: z.string().min(1),
+  yearOfCreation: z.string().min(4),
   techs: z.string().transform((tech) => tech.split(',')),
 })
 
@@ -22,25 +25,40 @@ export type TPortfolioFormInput = z.input<typeof portfolioFormSchema>
 export type TPortfolioFormOutput = z.output<typeof portfolioFormSchema>
 
 export const PortfolioConfig = () => {
+  const [removeImage, setRemoveImage] = useState(false)
+
   const { selectedFile, handleSelectFile, changeSelectedFile } =
     useSelectedFile()
 
-  const { handleSubmit, setError, register, reset } =
-    useForm<TPortfolioFormInput>({
-      resolver: zodResolver(portfolioFormSchema),
-    })
+  const {
+    handleSubmit,
+    setError,
+    register,
+    reset,
+    formState: { isSubmitting },
+  } = useForm<TPortfolioFormInput>({
+    resolver: zodResolver(portfolioFormSchema),
+  })
 
   const handleCreatePortfolioItem = async (dataOutput: any) => {
     const data = dataOutput as TPortfolioFormOutput
     try {
       setError('root', { message: '' })
-      const { description, githubLink, projectName, siteLink, techs } = data
+      const {
+        description,
+        githubLink,
+        projectName,
+        siteLink,
+        techs,
+        yearOfCreation,
+      } = data
       const newPortfolioItem: TPortfolioFormOutput = {
         description,
         githubLink,
         projectName,
         siteLink,
         techs,
+        yearOfCreation,
       }
 
       const postDocRef = await addDoc(
@@ -58,11 +76,17 @@ export const PortfolioConfig = () => {
           imageUrl: downloadURL,
         })
       }
-      reset()
     } catch (error: any) {
       console.log('handleCreatePost error', error.message)
       setError('root', { message: 'Error creating post' })
+    } finally {
+      reset()
+      setRemoveImage(true)
     }
+  }
+
+  const handleRemoveImage = (remove: boolean) => {
+    setRemoveImage(remove)
   }
 
   return (
@@ -74,19 +98,35 @@ export const PortfolioConfig = () => {
         onSubmit={handleSubmit(handleCreatePortfolioItem)}
         className="flex flex-col gap-2"
       >
-        <div className="flex flex-col px-4">
-          <label htmlFor="projectName" className="text-purple-500 font-bold">
-            Nome do Projeto
-          </label>
-          <InputRef
-            id="projectName"
-            type="text"
-            placeholder="Ex. Clone do Reddit"
-            {...register('projectName')}
-            icon={() => (
-              <AiOutlineProject size={28} className="text-purple-500" />
-            )}
-          />
+        <div className="flex gap-2 w-full">
+          <div className="flex flex-col px-4 w-full">
+            <label htmlFor="projectName" className="text-purple-500 font-bold">
+              Nome do Projeto
+            </label>
+            <InputRef
+              id="projectName"
+              type="text"
+              placeholder="Ex. Clone do Reddit"
+              {...register('projectName')}
+              icon={() => (
+                <AiOutlineProject size={28} className="text-purple-500" />
+              )}
+            />
+          </div>
+          <div className="flex flex-col px-4 w-fit">
+            <label htmlFor="projectName" className="text-purple-500 font-bold">
+              Ano de Criação
+            </label>
+            <InputRef
+              id="projectName"
+              type="date"
+              placeholder="Ex. 2023"
+              {...register('yearOfCreation')}
+              icon={() => (
+                <BsFillCalendarWeekFill size={24} className="text-purple-500" />
+              )}
+            />
+          </div>
         </div>
         <div className="flex flex-col px-4">
           <label htmlFor="projectName" className="text-purple-500 font-bold">
@@ -117,9 +157,7 @@ export const PortfolioConfig = () => {
             type="text"
             placeholder="Ex. https://github.com/Alan-Junqueira/portfolio-next13-tailwind"
             {...register('githubLink')}
-            icon={() => (
-              <AiOutlineProject size={28} className="text-purple-500" />
-            )}
+            icon={() => <AiFillGithub size={28} className="text-purple-500" />}
           />
         </div>
         <div className="flex flex-col px-4">
@@ -132,7 +170,7 @@ export const PortfolioConfig = () => {
             placeholder="Ex. https://portfolio-next13-tailwind.vercel.app/"
             {...register('siteLink')}
             icon={() => (
-              <AiOutlineProject size={28} className="text-purple-500" />
+              <AiOutlineGlobal size={28} className="text-purple-500" />
             )}
           />
         </div>
@@ -145,9 +183,7 @@ export const PortfolioConfig = () => {
             type="text"
             placeholder="Ex. React, NextJs, Tailwind, Zod, Prisma"
             {...register('techs')}
-            icon={() => (
-              <AiOutlineProject size={28} className="text-purple-500" />
-            )}
+            icon={() => <TbAtomOff size={28} className="text-purple-500" />}
           />
         </div>
         <div className="self-center w-fit m-4 p-8 border-2 border-purple-500 rounded-lg">
@@ -155,11 +191,14 @@ export const PortfolioConfig = () => {
             onSelectImage={handleSelectFile}
             selectedFile={selectedFile}
             setSelectedFile={changeSelectedFile}
+            removeImage={removeImage}
+            handleRemoveImage={handleRemoveImage}
           />
         </div>
         <button
-          className="bg-gray-900 px-6 py-2 rounded w-4/12 self-center font-bold"
+          className="bg-gray-900 px-6 py-2 rounded w-4/12 self-center font-bold disabled:cursor-not-allowed disabled:bg-opacity-50"
           type="submit"
+          disabled={isSubmitting}
         >
           Criar novo Portfolio
         </button>

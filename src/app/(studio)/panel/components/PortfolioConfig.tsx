@@ -17,7 +17,7 @@ export const portfolioFormSchema = z.object({
   githubLink: z.string().min(1),
   siteLink: z.string().min(1),
   description: z.string().min(1),
-  yearOfCreation: z.string().min(4),
+  projectCreation: z.string().min(4),
   techs: z.string().transform((tech) => tech.split(',')),
 })
 
@@ -50,7 +50,7 @@ export const PortfolioConfig = () => {
         projectName,
         siteLink,
         techs,
-        yearOfCreation,
+        projectCreation,
       } = data
       const newPortfolioItem: TPortfolioFormOutput = {
         description,
@@ -58,7 +58,7 @@ export const PortfolioConfig = () => {
         projectName,
         siteLink,
         techs,
-        yearOfCreation,
+        projectCreation,
       }
 
       const postDocRef = await addDoc(
@@ -121,7 +121,7 @@ export const PortfolioConfig = () => {
               id="projectName"
               type="date"
               placeholder="Ex. 2023"
-              {...register('yearOfCreation')}
+              {...register('projectCreation')}
               icon={() => (
                 <BsFillCalendarWeekFill size={24} className="text-purple-500" />
               )}

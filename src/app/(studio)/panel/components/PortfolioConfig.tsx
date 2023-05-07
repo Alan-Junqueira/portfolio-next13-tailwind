@@ -114,11 +114,14 @@ export const PortfolioConfig = () => {
             />
           </div>
           <div className="flex flex-col px-4 w-fit">
-            <label htmlFor="projectName" className="text-purple-500 font-bold">
+            <label
+              htmlFor="projectCreation"
+              className="text-purple-500 font-bold"
+            >
               Ano de Criação
             </label>
             <InputRef
-              id="projectName"
+              id="projectCreation"
               type="date"
               placeholder="Ex. 2023"
               {...register('projectCreation')}
@@ -129,7 +132,7 @@ export const PortfolioConfig = () => {
           </div>
         </div>
         <div className="flex flex-col px-4">
-          <label htmlFor="projectName" className="text-purple-500 font-bold">
+          <label htmlFor="description" className="text-purple-500 font-bold">
             Descrição
           </label>
           <textarea
@@ -144,6 +147,7 @@ export const PortfolioConfig = () => {
               w-full
             "
             rows={5}
+            id="description"
             placeholder="Detalhes de implementação do projeto"
             {...register('description')}
           />

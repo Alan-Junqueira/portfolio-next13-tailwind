@@ -1,7 +1,7 @@
 import { TPortfolio } from '@/@types/Portfolio'
 import { firestore } from '@/libs/firebase'
 import { query, collection, orderBy, limit, getDocs } from 'firebase/firestore'
-// import { ProjectsPagination } from './components/ProjectsPagination'
+import { ProjectsPagination } from './components/ProjectsPagination'
 
 const totalItemsPerPage = 10
 
@@ -21,17 +21,17 @@ const getProjects = async (): Promise<TPortfolio[]> => {
   return projects
 }
 
-// const getTotalProjects = async () => {
-//   const portfolioQuery = query(collection(firestore, 'portfolio'))
-//   const portfolioDocs = await getDocs(portfolioQuery)
-//   const totalProjects = portfolioDocs.size
+const getTotalProjects = async () => {
+  const portfolioQuery = query(collection(firestore, 'portfolio'))
+  const portfolioDocs = await getDocs(portfolioQuery)
+  const totalProjects = portfolioDocs.size
 
-//   return totalProjects
-// }
+  return totalProjects
+}
 
 export default async function Projects() {
   const projects = await getProjects()
-  // const totalProjects = await getTotalProjects()
+  const totalProjects = await getTotalProjects()
 
   return (
     <>
@@ -47,11 +47,11 @@ export default async function Projects() {
           <div>Techs {project.techs.map((tech) => tech)}</div>
         </div>
       ))}
-      {/* <ProjectsPagination
+      <ProjectsPagination
         totalProjects={totalProjects}
         totalItemsPerPage={totalItemsPerPage}
         lastRef={projects[projects.length - 1].projectCreation}
-      /> */}
+      />
     </>
   )
 }

@@ -4,6 +4,8 @@ import { query, collection, orderBy, limit, getDocs } from 'firebase/firestore'
 import { ProjectsPagination } from './components/ProjectsPagination'
 import Image from 'next/image'
 import dayjs from 'dayjs'
+import { ProjectsPortfolioAccordion } from './components/ProjectsPortfolioAccordion'
+import Link from 'next/link'
 
 const totalItemsPerPage = 10
 
@@ -75,10 +77,19 @@ export default async function Projects() {
                 ))}
               </div>
             </div>
-            <div>descrição: {project.description}</div>
-            <div>githubLink: {project.githubLink}</div>
+            <ProjectsPortfolioAccordion
+              description={project.description}
+              triggerValue={project.projectName}
+            />
+            <div className="flex justify-between items-center gap-2 w-full">
+              <Link href={project.githubLink} target="_blank">
+                Github
+              </Link>
 
-            <div>siteLink: {project.siteLink}</div>
+              <Link href={project.siteLink} target="_blank">
+                Site
+              </Link>
+            </div>
           </div>
         ))}
       </div>

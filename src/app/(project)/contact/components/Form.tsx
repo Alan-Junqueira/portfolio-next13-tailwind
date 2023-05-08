@@ -165,16 +165,16 @@ export const Form = () => {
             type="submit"
             disabled={isSubmitting}
             className="
-          flex gap-2 items-center justify-center
-          text-lg uppercase font-bold font-sans
-          mt-8 py-2 px-4 rounded-lg
-          bg-fuchsia-700  hover:bg-transparent
-            text-green-300 hover:text-green-500
-            border-2 border-green-500 hover:border-fuchsia-700
-            transition-all ease-in duration-200 
-            w-full truncate
-            disabled:cursor-not-allowed disabled:opacity-50
-          "
+              flex gap-2 items-center justify-center
+              text-lg uppercase font-bold font-sans
+              mt-8 py-2 px-4 rounded-lg
+              bg-fuchsia-700  hover:bg-transparent
+              text-green-300 hover:text-green-500
+              border-2 border-green-500 hover:border-fuchsia-700
+              transition-all ease-in duration-200 
+              w-full truncate
+              disabled:cursor-not-allowed disabled:opacity-50
+            "
           >
             Enviar
           </button>

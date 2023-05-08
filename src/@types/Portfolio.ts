@@ -1,6 +1,6 @@
 export type TPortfolio = {
   id: string
-  imageUrl?: string
+  imageUrl: string
   projectName: string
   githubLink: string
   siteLink: string

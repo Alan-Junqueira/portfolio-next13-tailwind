@@ -7,13 +7,11 @@ import dayjs from 'dayjs'
 import { ProjectsPortfolioAccordion } from './components/ProjectsPortfolioAccordion'
 import Link from 'next/link'
 
-const totalItemsPerPage = 10
-
-const getProjects = async (): Promise<TPortfolio[]> => {
+const getProjects = async (limitReturn: number): Promise<TPortfolio[]> => {
   const portfolioQuery = query(
     collection(firestore, 'portfolio'),
     orderBy('projectCreation', 'desc'),
-    limit(totalItemsPerPage),
+    limit(limitReturn),
   )
 
   const portfolioDocs = await getDocs(portfolioQuery)
@@ -25,6 +23,9 @@ const getProjects = async (): Promise<TPortfolio[]> => {
   return projects
 }
 
+// export const dynamic = 'force-dynamic'
+export const revalidate = 60
+
 const getTotalProjects = async () => {
   const portfolioQuery = query(collection(firestore, 'portfolio'))
   const portfolioDocs = await getDocs(portfolioQuery)
@@ -34,8 +35,12 @@ const getTotalProjects = async () => {
 }
 
 export default async function Projects() {
-  const projects = await getProjects()
-  const totalProjects = await getTotalProjects()
+  const totalItemsPerPage = 10
+
+  const [projects, totalProjects] = await Promise.all([
+    getProjects(10),
+    getTotalProjects(),
+  ])
 
   return (
     <>

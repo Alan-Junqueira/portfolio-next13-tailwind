@@ -2,6 +2,7 @@
   "extends": ["next/core-web-vitals", "@rocketseat/eslint-config/react"],
   "rules": {
     "camelcase": ["error", {"allow": ["IBM_Plex_Mono"]}],
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "prettier/prettier": "off"
   }
 }

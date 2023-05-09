@@ -5,7 +5,8 @@ import { ProjectsPagination } from './components/ProjectsPagination'
 import Image from 'next/image'
 import dayjs from 'dayjs'
 import { ProjectsPortfolioAccordion } from './components/ProjectsPortfolioAccordion'
-import Link from 'next/link'
+import { BsGithub, BsGlobe } from 'react-icons/bs'
+import { ProjectsCardLink } from './components/ProjectsCardLink'
 
 const getProjects = async (limitReturn: number): Promise<TPortfolio[]> => {
   const portfolioQuery = query(
@@ -66,10 +67,32 @@ export default async function Projects() {
               />
               <div
                 className="
+                  absolute z-10 inset-0
+                  flex items-center justify-center gap-4
+                  opacity-0
+                  bg-black bg-opacity-50
+                  hover:opacity-100
+                  transition-all ease-in duration-200
+                "
+              >
+                <ProjectsCardLink
+                  text='Github'
+                  icon={() => <BsGithub />}
+                  href={project.githubLink}
+                />
+                <ProjectsCardLink
+                  text='Site'
+                  icon={() => <BsGlobe />}
+                  href={project.siteLink}
+                />
+              </div>
+              <div
+                className="
                   flex items-center justify-end gap-2 flex-wrap
                   absolute bottom-0 left-0 right-0
                   backdrop-saturate-blur bg-[#08070B] bg-opacity-60
                   px-6 py-2
+                  border-y border-y-neutral-600
                 "
               >
                 {project.techs.map((tech, index) => (
@@ -86,15 +109,6 @@ export default async function Projects() {
               description={project.description}
               triggerValue={project.projectName}
             />
-            <div className="flex justify-between items-center gap-2 w-full">
-              <Link href={project.githubLink} target="_blank">
-                Github
-              </Link>
-
-              <Link href={project.siteLink} target="_blank">
-                Site
-              </Link>
-            </div>
           </div>
         ))}
       </div>

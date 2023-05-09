@@ -11,7 +11,8 @@ import {
   getDocs,
   startAfter,
 } from 'firebase/firestore'
-import { HTMLAttributes, useCallback, useEffect, useState } from 'react'
+import { HTMLAttributes, useCallback, useEffect, useRef, useState } from 'react'
+import { ProjectsCard } from './ProjectsCard'
 
 interface IProjectsPagination extends HTMLAttributes<HTMLDivElement> {
   totalProjects: number
@@ -27,6 +28,8 @@ export const ProjectsPagination = ({
 }: IProjectsPagination) => {
   const [actualPage, setActualPage] = useState(1)
   const [updatedLastRef, setUpdatedLastRef] = useState('')
+
+  const showMoreRef = useRef<HTMLButtonElement>(null)
 
   const totalPages = Math.ceil(totalProjects / 10)
 
@@ -75,14 +78,36 @@ export const ProjectsPagination = ({
     changeLastRef(lastRef)
   }, [lastRef])
 
+  useEffect(() => {
+    function handleShowMoreClick() {
+        showMoreRef.current?.click()
+    }
+
+    const observer = new IntersectionObserver(handleShowMoreClick, {
+      rootMargin: '150px',
+      threshold: 1.0
+    });
+    observer.observe(document.querySelector('#show-more-button') as Element);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [])
+
   return (
-    <div {...props} className="flex flex-col">
-      {portfolios.map((portfolio) => (
-        <p key={portfolio.id}>{portfolio.projectName}</p>
-      ))}
-      <p>{totalPages}</p>
-      <p>{actualPage}</p>
-      <button onClick={changeActualPage}>Mostrar mais</button>
-    </div>
+    <div {...props} className="flex flex-col mb-16">
+      <div className='grid grid-cols-1 md:grid-cols-2 sm:px-4 md:gap-4'>
+        {portfolios.map((portfolio) => (
+          <ProjectsCard
+            key={portfolio.id}
+            project={portfolio}
+          />
+        ))}
+      </div>
+      {totalPages !== actualPage && (
+        <button id='show-more-button' className='opacity-0 w-fit' ref={showMoreRef} onClick={changeActualPage}>.</button>
+      )
+      }
+    </div >
   )
 }

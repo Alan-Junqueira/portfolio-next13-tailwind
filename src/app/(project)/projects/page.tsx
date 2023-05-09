@@ -2,11 +2,7 @@ import { TPortfolio } from '@/@types/Portfolio'
 import { firestore } from '@/libs/firebase'
 import { query, collection, orderBy, limit, getDocs } from 'firebase/firestore'
 import { ProjectsPagination } from './components/ProjectsPagination'
-import Image from 'next/image'
-import dayjs from 'dayjs'
-import { ProjectsPortfolioAccordion } from './components/ProjectsPortfolioAccordion'
-import { BsGithub, BsGlobe } from 'react-icons/bs'
-import { ProjectsCardLink } from './components/ProjectsCardLink'
+import { ProjectsCard } from './components/ProjectsCard'
 
 const getProjects = async (limitReturn: number): Promise<TPortfolio[]> => {
   const portfolioQuery = query(
@@ -48,68 +44,10 @@ export default async function Projects() {
       <h1>Projetos</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 sm:px-4 md:gap-4">
         {projects.map((project) => (
-          <div key={project.id}>
-            <div className="flex items-center justify-between">
-              <h3 className="text-transparent bg-gradient-to-br from-fuchsia-700 to-pink-500 bg-clip-text text-2xl font-bold">
-                {project.projectName}
-              </h3>
-              <div className="text-transparent bg-gradient-to-br from-fuchsia-700 to-pink-500 bg-clip-text text-sm font-bold">
-                {dayjs(project.projectCreation).format('MM/YYYY')}
-              </div>
-            </div>
-            <div className="relative rounded-t-lg overflow-hidden">
-              <Image
-                src={project.imageUrl}
-                alt={project.projectName}
-                width={1080}
-                height={720}
-                className="w-full h-auto"
-              />
-              <div
-                className="
-                  absolute z-10 inset-0
-                  flex items-center justify-center gap-4
-                  opacity-0
-                  bg-black bg-opacity-50
-                  hover:opacity-100
-                  transition-all ease-in duration-200
-                "
-              >
-                <ProjectsCardLink
-                  text='Github'
-                  icon={() => <BsGithub />}
-                  href={project.githubLink}
-                />
-                <ProjectsCardLink
-                  text='Site'
-                  icon={() => <BsGlobe />}
-                  href={project.siteLink}
-                />
-              </div>
-              <div
-                className="
-                  flex items-center justify-end gap-2 flex-wrap
-                  absolute bottom-0 left-0 right-0
-                  backdrop-saturate-blur bg-[#08070B] bg-opacity-60
-                  px-6 py-2
-                  border-y border-y-neutral-600
-                "
-              >
-                {project.techs.map((tech, index) => (
-                  <span
-                    key={tech + index}
-                    className="bg-fuchsia-700 text-xs font-bold rounded-lg text-neutral-50 px-2 py-1"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <ProjectsPortfolioAccordion
-              description={project.description}
-              triggerValue={project.projectName}
-            />
-          </div>
+          <ProjectsCard
+            key={project.id}
+            project={project}
+          />
         ))}
       </div>
       <ProjectsPagination

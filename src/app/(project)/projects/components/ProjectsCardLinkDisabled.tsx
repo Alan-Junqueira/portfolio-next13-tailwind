@@ -1,35 +1,34 @@
-import Link, { LinkProps } from 'next/link'
-import React, { HTMLAttributes } from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 
-interface IProjectsCardLink
-  extends HTMLAttributes<HTMLAnchorElement>, LinkProps {
+interface IProjectsCardLinkDisabled extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon: () => void
   text: string
 }
 
-export const ProjectsCardLink = ({ icon, text, ...props }: IProjectsCardLink) => {
+export const ProjectsCardLinkDisabled = ({ icon, text, ...props }: IProjectsCardLinkDisabled) => {
   return (
-    <Link
+    <button
       {...props}
-      target="_blank"
       className={`
         flex items-center gap-2
         mb-7 md:mb-1
         py-1 px-3 
-        cursor-pointer 
         rounded-md
         font-bold text-base
         hover:underline
         text-green-500 hover:text-green-300
         bg-gray-900 hover:bg-fuchsia-700
         transition-all ease-in duration-200 
+        cursor-not-allowed
+        opacity-70
         ${props.className}
       `}
+      disabled
     >
       <>
         {icon()}
         {text}
       </>
-    </Link>
+    </button>
   )
 }

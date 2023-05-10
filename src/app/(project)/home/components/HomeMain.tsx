@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { DevAnimation } from '@/components/DevAnimation'
 import { LinkContact } from '@/components/LinkContact'
 import { SocialsHeader } from '@/components/SocialsHeader'
-import { LinkDownloadCv } from '../LinkDoneloadCv'
+import { LinkDownloadCv } from '../../../../components/LinkDoneloadCv'
 
 export const HomeMain = () => {
   return (

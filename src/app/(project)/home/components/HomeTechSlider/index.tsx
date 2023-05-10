@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { TechCard } from '@/components/TechCard'
 
-import aboutMe from '../../../jsons/about-me.json'
+import aboutMe from '../../../../../jsons/about-me.json'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'

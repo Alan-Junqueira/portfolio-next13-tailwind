@@ -11,7 +11,7 @@ import {
   getDocs,
   startAfter,
 } from 'firebase/firestore'
-import { HTMLAttributes, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { HTMLAttributes, useCallback, useEffect, useRef, useState } from 'react'
 import { ProjectsCard } from './ProjectsCard'
 
 interface IProjectsPagination extends HTMLAttributes<HTMLDivElement> {
@@ -26,6 +26,8 @@ export const ProjectsPagination = ({
   lastRef,
   ...props
 }: IProjectsPagination) => {
+  const [mounted, setMounted] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [actualPage, setActualPage] = useState(1)
   const [updatedLastRef, setUpdatedLastRef] = useState('')
 
@@ -78,9 +80,14 @@ export const ProjectsPagination = ({
     changeLastRef(lastRef)
   }, [lastRef])
 
-  useLayoutEffect(() => {
+  useEffect(() => {
+    setMounted(true);
+
     function handleShowMoreClick() {
-        showMoreRef.current?.click()
+      if (!mounted || !scrolled) {
+        return;
+      }
+      showMoreRef.current?.click();
     }
 
     const observer = new IntersectionObserver(handleShowMoreClick, {
@@ -92,7 +99,21 @@ export const ProjectsPagination = ({
     return () => {
       observer.disconnect();
     };
-  }, [])
+  }, [mounted, scrolled])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 150) {
+        setScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [mounted, scrolled]);
 
   return (
     <div {...props} className="flex flex-col mb-16">

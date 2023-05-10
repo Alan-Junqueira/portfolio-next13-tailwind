@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Autoplay, Pagination, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import aboutMe from '../../../jsons/about-me.json'
+import aboutMe from '../../../../../jsons/about-me.json'
 
 import 'swiper/css'
 import 'swiper/css/pagination'

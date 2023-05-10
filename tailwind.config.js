@@ -15,7 +15,7 @@ module.exports = {
           nodeJs: '#8CC84B',
           github: '#000000',
           sass: '#EC407A',
-        },
+        }
       },
       keyframes: {
         slideDown: {

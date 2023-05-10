@@ -21,6 +21,7 @@ export const HomeTechStack = () => {
             alt='Tech Stack'
             width={500}
             height={500}
+            draggable={false}
           />
         </div>
         <div
@@ -44,7 +45,7 @@ export const HomeTechStack = () => {
           <p>Percebi que é possível utilizar tanto bancos de dados relacionais quanto não relacionais para salvar dados, e aprendi diversas formas de trabalhar com eles. Desde a utilização dos bancos na minha própria máquina até a conexão com sites que suportam esses bancos. Além disso, descobri como criar containers <HomeTechHighlight>Docker</HomeTechHighlight> e utilizá-los para acessar os bancos de dados, tornando todo o processo ainda mais eficiente.</p>
           <p>Para facilitar a inserção de dados nos bancos, aprendi a utilizar <HomeTechHighlight> ORMs</HomeTechHighlight> como Sequelize e Prisma para bancos de dados relacionais, como <HomeTechHighlight> PostgreSQL</HomeTechHighlight>, <HomeTechHighlight> MySQL</HomeTechHighlight> e <HomeTechHighlight> SQLite</HomeTechHighlight>, além do <HomeTechHighlight> Mongoose</HomeTechHighlight> para bancos NoSQL, como o <HomeTechHighlight> MongoDB</HomeTechHighlight>, conectando-me com o <HomeTechHighlight>Atlas</HomeTechHighlight>. E não paro de me aperfeiçoar nesses conceitos!</p>
           <p>Mas meu aprendizado não fica restrito ao desenvolvimento web, também comecei a estudar o desenvolvimento mobile, utilizando o poderoso <HomeTechHighlight>React Native</HomeTechHighlight>, para expandir ainda mais minha stack de desenvolvimento e criar soluções mobile.</p>
-          <p>E é claro, não poderia deixar de mencionar a importância do <HomeTechHighlight>Git</HomeTechHighlight> para versionamento de código, que me permite trabalhar de forma colaborativa e com total segurança. Com todas essas habilidades, sou capaz de criar soluções incríveis e tornar o mundo digital ainda mais surpreendente!</p>
+          <p>E é claro, não poderia deixar de mencionar a importância do <HomeTechHighlight>Git</HomeTechHighlight> e <HomeTechHighlight>Github</HomeTechHighlight> para versionamento de código, que me permite trabalhar de forma colaborativa e com total segurança. Com todas essas habilidades, sou capaz de criar soluções incríveis e tornar o mundo digital ainda mais surpreendente!</p>
         </div>
       </div>
     </div>

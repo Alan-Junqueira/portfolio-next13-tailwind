@@ -18,16 +18,6 @@ export const HomeCertificatesSlider = () => {
       className="
         flex flex-col gap-4 md:gap-6 lg:gap-8 py-10"
     >
-      <h2
-        className="
-          px-4 md:px-6 lg:px-8
-          text-center
-          text-transparent bg-gradient-to-br from-fuchsia-700 to-pink-500 bg-clip-text text-4xl font-bold
-          mb-10
-          "
-      >
-        Certificados
-      </h2>
       <Swiper
         slidesPerView={1}
         spaceBetween={8}

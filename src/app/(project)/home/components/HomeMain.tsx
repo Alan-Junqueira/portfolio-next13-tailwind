@@ -1,11 +1,19 @@
 import Image from 'next/image'
+import dayjs from 'dayjs'
+import { HiHomeModern } from 'react-icons/hi2'
+import { SlCalender } from 'react-icons/sl'
 
 import { DevAnimation } from '@/components/DevAnimation'
 import { LinkContact } from '@/components/LinkContact'
 import { SocialsHeader } from '@/components/SocialsHeader'
-import { LinkDownloadCv } from '../../../../components/LinkDoneloadCv'
+import { LinkDownloadCv }
+  from '../../../../components/LinkDoneloadCv'
 
 export const HomeMain = () => {
+  const birth: string = "1995-07-24"
+  const now = dayjs()
+  const age = now.diff(birth, 'year')
+
   return (
     <main
       className="
@@ -17,7 +25,14 @@ export const HomeMain = () => {
       border-y-2 border-emerald-500
     "
     >
-      <div className="absolute inset-0 -z-10 opacity-20 bg-[url('/assets/images/home-particles.png')]"></div>
+      <div className="absolute inset-0 -z-10 opacity-20">
+        <Image 
+          src="/assets/images/home-particles.png"
+          alt='particles background'
+          fill
+          quality={30}
+        />
+      </div>
       <div className="order-2 sm:order-1">
         <p className=" text-gray-200 text-xl mb-4">
           Seja bem vindo{' '}
@@ -35,11 +50,29 @@ export const HomeMain = () => {
         <h2 className="mb-4 h-5">
           <DevAnimation />
         </h2>
-        <p className="text-green-500 text-sm text-justify">
+        <p className="text-green-500 text-sm text-justify mt-8">
           Desenvolvedor Full Stack, focado em criar códigos limpos e de fácil
           manutenção, com atenção aos detalhes, visando uma melhor experiência
           para o usuário, página responsiva, código escalável e funcional.
         </p>
+        <div className='mt-2'>
+          <div className='flex flex-col gap-1 text-sm'>
+            <span className='flex items-center gap-2'>
+              <HiHomeModern size={20}/>
+              <strong
+                className='text-transparent bg-gradient-to-br from-fuchsia-700 to-pink-500 bg-clip-text'>
+                Caldas Novas - Go
+              </strong>
+            </span>
+            <span className='flex items-center gap-2'>
+              <SlCalender size={20}/>
+              <strong
+                className='text-transparent bg-gradient-to-br from-fuchsia-700 to-pink-500 bg-clip-text'>
+                {age} anos
+              </strong>
+            </span>
+          </div>
+        </div>
         <div className="flex gap-4 mt-10">
           <LinkContact />
           <LinkDownloadCv />
@@ -63,10 +96,11 @@ export const HomeMain = () => {
         <Image
           src="/assets/images/perfil.png"
           alt="Minha imagem de perfil"
-          width={450}
-          height={450}
+          width={200}
+          height={200}
           className="rounded-full w-fit h-full object-contain bg-fuchsia-900 p-1"
           priority
+          quality={100}
           draggable={false}
         />
       </div>

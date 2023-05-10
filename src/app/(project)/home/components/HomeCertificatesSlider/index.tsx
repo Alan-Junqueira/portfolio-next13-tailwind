@@ -51,7 +51,7 @@ export const HomeCertificatesSlider = () => {
         {aboutMe.certificates.map((certificate) => (
           <SwiperSlide
             key={certificate.name}
-            className="rounded-lg bg-stone-50 mb-8"
+            className="rounded-lg bg-stone-50 mb-8 lg:max-w-[50%]"
           >
             <Image
               alt={certificate.alt}

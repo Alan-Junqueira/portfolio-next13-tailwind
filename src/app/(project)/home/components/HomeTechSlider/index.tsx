@@ -58,7 +58,7 @@ export const HomeTechSlider = () => {
         {aboutMe.programmingLanguages.map((language) => (
           <SwiperSlide
             key={language.name}
-            className="rounded-lg h-full bg-stone-50 mb-8"
+            className="rounded-lg h-full bg-stone-50 mb-8 lg:max-w-[33.33%]"
           >
             <TechCard
               description={language.description}

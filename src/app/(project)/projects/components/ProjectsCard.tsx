@@ -21,7 +21,7 @@ export const ProjectsCard = ({ project, ...props }: IProjectsCard) => {
           {dayjs(project.projectCreation).format('MM/YYYY')}
         </div>
       </div>
-      <div className="relative rounded-t-lg overflow-hidden">
+      <div className="relative rounded-t-lg overflow-hidden max-h-80">
         <Image
           src={project.imageUrl}
           alt={project.projectName}

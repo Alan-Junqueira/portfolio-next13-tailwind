@@ -1,0 +1,39 @@
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgb(162, 28, 175);
+
+  border-radius: 100%;
+  padding: 8px;
+  background-color: rgb(17 24 39);
+  border: 2px solid;
+
+  width: 44px;
+  height: 44px;
+
+  transition: all ease 0.3s;
+}
+.swiper-button-prev {
+  padding-right: 10px;
+}
+.swiper-button-next {
+  padding-left: 12px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgb(31 41 55);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 28px !important;
+  font-weight: bold;
+}
+
+.swiper-pagination {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(162, 28, 175);
+}

@@ -11,7 +11,7 @@ import {
   getDocs,
   startAfter,
 } from 'firebase/firestore'
-import { HTMLAttributes, useCallback, useEffect, useRef, useState } from 'react'
+import { HTMLAttributes, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { ProjectsCard } from './ProjectsCard'
 
 interface IProjectsPagination extends HTMLAttributes<HTMLDivElement> {
@@ -78,7 +78,7 @@ export const ProjectsPagination = ({
     changeLastRef(lastRef)
   }, [lastRef])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     function handleShowMoreClick() {
         showMoreRef.current?.click()
     }

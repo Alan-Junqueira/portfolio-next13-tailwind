@@ -6,22 +6,14 @@
   .backdrop-saturate-blur {
     backdrop-filter: saturate(180%) blur(5px);
   }
-  
+
   .truncate-two {
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    overflow: hidden;
+    text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
-}
-
-.swiper-button-prev, .swiper-button-next {
-  color: rgb(162, 28, 175);
-}
-
-.swiper-pagination-bullet {
-  background-color: rgb(162, 28, 175)
 }
 
 ::selection {

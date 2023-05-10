@@ -1,17 +1,16 @@
 'use client'
 
-import aboutMe from '../../../jsons/about-me.json'
-
+import { Autoplay, Pagination, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
+import { TechCard } from '@/components/TechCard'
+
+import aboutMe from '../../../jsons/about-me.json'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import { Autoplay, Pagination, Navigation } from 'swiper'
-
 import './styles.css'
-import { TechCard } from '@/components/TechCard'
 
 export const HomeTechSlider = () => {
   return (
@@ -59,7 +58,7 @@ export const HomeTechSlider = () => {
         {aboutMe.programmingLanguages.map((language) => (
           <SwiperSlide
             key={language.name}
-            className="rounded-lg h-full bg-stone-50"
+            className="rounded-lg h-full bg-stone-50 mb-8"
           >
             <TechCard
               description={language.description}

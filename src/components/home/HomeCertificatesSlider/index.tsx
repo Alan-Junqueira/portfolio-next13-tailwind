@@ -1,17 +1,16 @@
 'use client'
 
-import aboutMe from '../../../jsons/about-me.json'
-
+import Image from 'next/image'
+import { Autoplay, Pagination, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+
+import aboutMe from '../../../jsons/about-me.json'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import { Autoplay, Pagination, Navigation } from 'swiper'
-
 import './styles.css'
-import Image from 'next/image'
 
 export const HomeCertificatesSlider = () => {
   return (
@@ -47,12 +46,12 @@ export const HomeCertificatesSlider = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper h-full w-full overflow-hidden pb-10 flex items-center justify-center"
+        className="mySwiper h-full w-full overflow-hidden pb-10 flex items-center justify-center "
       >
         {aboutMe.certificates.map((certificate) => (
           <SwiperSlide
             key={certificate.name}
-            className="rounded-lg bg-stone-50"
+            className="rounded-lg bg-stone-50 mb-8"
           >
             <Image
               alt={certificate.alt}

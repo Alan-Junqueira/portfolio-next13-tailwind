@@ -8,19 +8,18 @@ export const HomeTechStack = () => {
     <div className='flex flex-col gap-6 py-10'>
       <HomeTitle title='Tech Stack' />
       <div className='
-            flex sm:grid items-center
-            sm:flex-col 
-            md:grid-cols-2
-            gap-4 lg:gap-8
-            px-6
-          '
+          flex flex-col md:grid md:grid-cols-2
+          items-center
+          gap-4 lg:gap-8
+          px-6
+        '
       >
-        <div className='relative'>
+        <div className='relative flex items-center justify-center mt-10 sm:mt-0 mb-10 sm:mb-0'>
           <Image
             src="/assets/images/techStack.svg"
             alt='Tech Stack'
-            width={500}
-            height={500}
+            width={350}
+            height={350}
             draggable={false}
           />
         </div>

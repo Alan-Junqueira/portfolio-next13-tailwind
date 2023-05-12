@@ -17,13 +17,13 @@ export const HomeMain = () => {
   return (
     <main
       className="
-      flex flex-col sm:grid sm:grid-cols-2
-      justify-between items-center 
-      gap-4 md:gap-6 lg:gap-8
-      px-4 md:px-6 lg:px-8 py-16
-      relative
-      border-y-2 border-emerald-500
-    "
+        flex flex-col sm:grid sm:grid-cols-2
+        justify-between items-center 
+        gap-4 md:gap-6 lg:gap-8
+        px-4 md:px-6 lg:px-8 py-16
+        relative
+        border-y-2 border-emerald-500
+      "
     >
       <div className="absolute inset-0 -z-10 opacity-20">
         <Image 

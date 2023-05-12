@@ -16,7 +16,7 @@ export const Footer = () => {
         py-8
       '
     >
-      <div className='w-full h-1 bg-gradient-to-br from-fuchsia-700 to-pink-500 rounded-r-lg'></div>
+      <div className='w-full h-1 bg-gradient-to-br from-fuchsia-700 to-pink-500 rounded-r-lg animate-pulse'></div>
       <Link
         href="https://www.linkedin.com/in/alan-junqueira/"
         target="_blank"
@@ -161,7 +161,7 @@ export const Footer = () => {
             '
         />
       </Link>
-      <div className='w-full h-1 bg-gradient-to-br from-fuchsia-700 to-pink-500 rounded-l-lg'></div>
+      <div className='w-full h-1 bg-gradient-to-br from-fuchsia-700 to-pink-500 rounded-l-lg animate-pulse'></div>
     </footer>
   )
 }

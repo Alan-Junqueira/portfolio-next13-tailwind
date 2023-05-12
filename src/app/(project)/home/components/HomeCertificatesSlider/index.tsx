@@ -46,8 +46,8 @@ export const HomeCertificatesSlider = () => {
             <Image
               alt={certificate.alt}
               src={certificate.banner}
-              width={1080}
-              height={650}
+              width={720}
+              height={480}
               className="lg:max-h-96"
               quality={100}
             />

@@ -40,11 +40,11 @@ export const SocialsHeader = () => {
             before:w-0 hover:before:w-fit
             hover:before:content-['Instagram']
             hover:before:-top-2 hover:before:bottom-0 hover:before:right-10
-            hover:before:bg-black hover:before:bg-opacity-70 hover:before:text-orange-500
+            hover:before:bg-black hover:before:bg-opacity-70 hover:before:text-rose-500
             hover:before:rounded-ss-xl hover:before:rounded-ee-xl
           "
         >
-          <FaInstagram className="text-gray-200 hover:text-orange-500 ease-in duration-300" />
+          <FaInstagram className="text-gray-200 hover:text-rose-500 ease-in duration-300" />
         </Link>
         <Link
           href="https://github.com/Alan-Junqueira"

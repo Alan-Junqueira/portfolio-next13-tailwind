@@ -13,9 +13,10 @@ export const Footer = () => {
     <footer
       className='
         flex items-center justify-center gap-4
-        p-8
+        py-8
       '
     >
+      <div className='w-full h-1 bg-gradient-to-br from-fuchsia-700 to-pink-500 rounded-r-lg'></div>
       <Link
         href="https://www.linkedin.com/in/alan-junqueira/"
         target="_blank"
@@ -33,19 +34,19 @@ export const Footer = () => {
         >
           Linkedin
         </span>
-        <FaLinkedinIn 
+        <FaLinkedinIn
           className='
               md:opacity-0 md:group-hover:opacity-100 
               text-lg md:text-xs
-            ' 
-          />
+            '
+        />
       </Link>
       <Link
         href="https://www.instagram.com/_alanjunqueira/"
         target="_blank"
         className="
           flex items-center gap-1
-          text-xs text-gray-200 hover:text-orange-500
+          text-xs text-gray-200 hover:text-rose-500
           group
         "
       >
@@ -57,12 +58,12 @@ export const Footer = () => {
         >
           Instagram
         </span>
-        <FaInstagram 
+        <FaInstagram
           className='
               md:opacity-0 md:group-hover:opacity-100 
               text-lg md:text-xs
-            ' 
-          />
+            '
+        />
       </Link>
       <Link
         href="https://github.com/Alan-Junqueira"
@@ -81,12 +82,12 @@ export const Footer = () => {
         >
           Github
         </span>
-        <FaGithub 
+        <FaGithub
           className='
               md:opacity-0 md:group-hover:opacity-100 
               text-lg md:text-xs
-            ' 
-          />
+            '
+        />
       </Link>
       <Link
         href="https://wa.me/64992391327"
@@ -105,12 +106,12 @@ export const Footer = () => {
         >
           Whatsapp
         </span>
-        <FaWhatsapp 
+        <FaWhatsapp
           className='
               md:opacity-0 md:group-hover:opacity-100 
               text-lg md:text-xs
-            ' 
-          />
+            '
+        />
       </Link>
       <Link
         href="https://twitter.com/_alanjunqueira"
@@ -129,12 +130,12 @@ export const Footer = () => {
         >
           Twitter
         </span>
-        <FaTwitter 
+        <FaTwitter
           className='
               md:opacity-0 md:group-hover:opacity-100 
               text-lg md:text-xs
-            ' 
-          />
+            '
+        />
       </Link>
       <Link
         href="https://www.facebook.com/Allann.Junnkh"
@@ -153,13 +154,14 @@ export const Footer = () => {
         >
           Facebook
         </span>
-        <FaFacebookF 
+        <FaFacebookF
           className='
               md:opacity-0 md:group-hover:opacity-100 
               text-lg md:text-xs
-            ' 
-          />
+            '
+        />
       </Link>
+      <div className='w-full h-1 bg-gradient-to-br from-fuchsia-700 to-pink-500 rounded-l-lg'></div>
     </footer>
   )
 }

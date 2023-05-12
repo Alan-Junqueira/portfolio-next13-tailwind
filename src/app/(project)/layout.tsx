@@ -5,6 +5,7 @@ import { ReactNode } from 'react'
 
 import '../global.css'
 import { Header } from '@/components/partials/Header'
+import { Footer } from '@/components/partials/Footer'
 
 const ibmPlexMono = IBM_Plex_Mono({
   weight: ['300', '400', '500', '600', '700'],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={`${ibmPlexMono.className} bg-gray-900 text-green-600`}>
         <Header />
         <div className="pt-20">{children}</div>
+        <Footer />
       </body>
     </html>
   )

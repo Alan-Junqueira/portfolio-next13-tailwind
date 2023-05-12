@@ -91,7 +91,9 @@ export const Form = () => {
       <form
         onSubmit={handleSubmit(handleSubmitForm)}
         className="
-        flex flex-col gap-3 items-center justify-center
+        flex flex-col gap-3 
+        items-center justify-center
+        mb-8
       "
       >
         <div

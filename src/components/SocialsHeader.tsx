@@ -56,11 +56,11 @@ export const SocialsHeader = () => {
             before:w-0 hover:before:w-fit
             hover:before:content-['Github']
             hover:before:-top-2 hover:before:bottom-0 hover:before:right-10
-            hover:before:bg-black hover:before:bg-opacity-70 hover:before:text-neutral-50
+            hover:before:bg-neutral-950 hover:before:bg-opacity-70 hover:before:text-neutral-50
             hover:before:rounded-ss-xl hover:before:rounded-ee-xl
           "
         >
-          <FaGithub className="text-gray-200 hover:text-black ease-in duration-300" />
+          <FaGithub className="text-gray-200 hover:text-neutral-950 ease-in duration-300" />
         </Link>
         <Link
           href="https://wa.me/64992391327"

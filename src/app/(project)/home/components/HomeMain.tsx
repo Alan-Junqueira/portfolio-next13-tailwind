@@ -26,7 +26,7 @@ export const HomeMain = () => {
       "
     >
       <div className="absolute inset-0 -z-10 opacity-20">
-        <Image 
+        <Image
           src="/assets/images/home-particles.png"
           alt='particles background'
           fill
@@ -58,14 +58,14 @@ export const HomeMain = () => {
         <div className='mt-2'>
           <div className='flex flex-col gap-1 text-sm'>
             <span className='flex items-center gap-2'>
-              <HiHomeModern size={20}/>
+              <HiHomeModern size={20} />
               <strong
                 className='text-transparent bg-gradient-to-br from-fuchsia-700 to-pink-500 bg-clip-text'>
                 Caldas Novas - Go
               </strong>
             </span>
             <span className='flex items-center gap-2'>
-              <SlCalender size={20}/>
+              <SlCalender size={20} />
               <strong
                 className='text-transparent bg-gradient-to-br from-fuchsia-700 to-pink-500 bg-clip-text'>
                 {age} anos
@@ -92,7 +92,6 @@ export const HomeMain = () => {
         >
           <SocialsHeader />
         </div>
-
         <Image
           src="/assets/images/perfil.png"
           alt="Minha imagem de perfil"

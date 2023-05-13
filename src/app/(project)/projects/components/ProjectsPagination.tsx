@@ -11,7 +11,7 @@ import {
   getDocs,
   startAfter,
 } from 'firebase/firestore'
-import { HTMLAttributes, useCallback, useEffect, useRef, useState } from 'react'
+import { HTMLAttributes, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { ProjectsCard } from './ProjectsCard'
 
 interface IProjectsPagination extends HTMLAttributes<HTMLDivElement> {
@@ -26,7 +26,6 @@ export const ProjectsPagination = ({
   lastRef,
   ...props
 }: IProjectsPagination) => {
-  const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [actualPage, setActualPage] = useState(1)
   const [updatedLastRef, setUpdatedLastRef] = useState('')
@@ -81,10 +80,9 @@ export const ProjectsPagination = ({
   }, [lastRef])
 
   useEffect(() => {
-    setMounted(true);
-
     function handleShowMoreClick() {
-      if (!mounted || !scrolled) {
+      console.log('entrou')
+      if (!scrolled) {
         return;
       }
       showMoreRef.current?.click();
@@ -99,9 +97,9 @@ export const ProjectsPagination = ({
     return () => {
       observer.disconnect();
     };
-  }, [mounted, scrolled])
+  }, [scrolled])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 150) {
         setScrolled(true);
@@ -113,7 +111,7 @@ export const ProjectsPagination = ({
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [mounted, scrolled]);
+  }, []);
 
   return (
     <div {...props} className="flex flex-col mb-16">

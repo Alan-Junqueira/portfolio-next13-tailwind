@@ -1,11 +1,11 @@
 import Image from 'next/image'
 
-import { DevAnimation } from '@/components/DevAnimation'
 import { LinkContact } from '@/components/LinkContact'
 import { LinkDownloadCv }
   from '../../../../components/LinkDoneloadCv'
 import { HTMLAttributes } from 'react'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
+import { ProjectsTechHighlight } from './ProjectsTechHighlight'
 
 interface IProjectsMain extends HTMLAttributes<HTMLElement> {
   totalProjects: number
@@ -22,6 +22,7 @@ export const ProjectsMain = ({ totalProjects, ...props }: IProjectsMain) => {
         px-4 md:px-6 lg:px-8 py-16
         relative
         border-y-2 border-emerald-500
+        mb-6
       "
     >
       <div className="absolute inset-0 -z-10 opacity-20">
@@ -34,25 +35,13 @@ export const ProjectsMain = ({ totalProjects, ...props }: IProjectsMain) => {
       </div>
       <div className="order-2 sm:order-1">
         <p className=" text-gray-200 text-xl mb-4">
-          Seja bem vindo ao meu portfolio
+          Seja bem vindo aos meus projetos
           <i className="font-bold text-transparent bg-gradient-to-br from-fuchsia-700 to-pink-500 bg-clip-text ">
             !!!
           </i>
         </p>
-        <h1 className="">
-          <i className="text-lg">Sou</i>
-          <strong className="text-transparent bg-gradient-to-br from-fuchsia-700 to-pink-500 bg-clip-text text-4xl">
-            {' '}
-            Alan Junqueira
-          </strong>
-        </h1>
-        <h2 className="mb-4 h-5">
-          <DevAnimation />
-        </h2>
         <p className="text-green-500 text-sm text-justify mt-8">
-          Desenvolvedor Full Stack, focado em criar códigos limpos e de fácil
-          manutenção, com atenção aos detalhes, visando uma melhor experiência
-          para o usuário, página responsiva, código escalável e funcional.
+          Você terá acesso a projetos pessoais, projetos desenvolvidos a partir do <ProjectsTechHighlight>Figma</ProjectsTechHighlight> , projetos de freelance e projetos que foram desenvolvidos acompanhando aulas de alguns cursos. As linguagens mais utilizadas são  <ProjectsTechHighlight>React Js</ProjectsTechHighlight>, <ProjectsTechHighlight>Next Js</ProjectsTechHighlight> e <ProjectsTechHighlight>Typescript</ProjectsTechHighlight>.
         </p>
         <div className='mt-2'>
           <div className='flex flex-col gap-1 text-sm'>

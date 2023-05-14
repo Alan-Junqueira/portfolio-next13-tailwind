@@ -1,8 +1,8 @@
-import { HomeCertificatesSlider } from '@/app/(project)/home/components/HomeCertificatesSlider'
-import { HomeMain } from '@/app/(project)/home/components/HomeMain'
-import { HomeTechSlider } from '@/app/(project)/home/components/HomeTechSlider'
-import { HomeTechStack } from './components/HomeTechStack'
-import { HomeCertificates } from './components/HomeCertificates'
+import { HomeCertificates } from "./components/HomeCertificates";
+import { HomeCertificatesSlider } from "./components/HomeCertificatesSlider";
+import { HomeMain } from "./components/HomeMain";
+import { HomeTechSlider } from "./components/HomeTechSlider";
+import { HomeTechStack } from "./components/HomeTechStack";
 
 export default function Home() {
   return (

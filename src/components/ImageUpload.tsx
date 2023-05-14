@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 import { ChangeEvent, useEffect, useRef } from 'react'
 
 interface IImageUpload {

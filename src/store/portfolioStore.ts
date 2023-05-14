@@ -1,5 +1,6 @@
-import { TPortfolio } from '@/@types/Portfolio'
 import { create } from 'zustand'
+
+import { TPortfolio } from '@/@types/Portfolio'
 
 type TPortfolioState = {
   portfolios: TPortfolio[]

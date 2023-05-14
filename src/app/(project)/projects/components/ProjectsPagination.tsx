@@ -1,8 +1,7 @@
 'use client'
 
-import { TPortfolio } from '@/@types/Portfolio'
-import { firestore } from '@/libs/firebase'
-import { usePortfolioStore } from '@/store/portfolioStore'
+import { HTMLAttributes, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+
 import {
   query,
   collection,
@@ -11,8 +10,14 @@ import {
   getDocs,
   startAfter,
 } from 'firebase/firestore'
-import { HTMLAttributes, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+
 import { ProjectsCard } from './ProjectsCard'
+
+import { firestore } from '@/libs/firebase'
+
+import { usePortfolioStore } from '@/store/portfolioStore'
+
+import { TPortfolio } from '@/@types/Portfolio'
 
 interface IProjectsPagination extends HTMLAttributes<HTMLDivElement> {
   totalProjects: number

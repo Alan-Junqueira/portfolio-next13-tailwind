@@ -1,5 +1,6 @@
-import { LinkIcon } from './LinkIcon'
 import { BsFillEnvelopeAtFill } from 'react-icons/bs'
+
+import { LinkIcon } from './LinkIcon'
 
 export const LinkContact = () => {
   return (

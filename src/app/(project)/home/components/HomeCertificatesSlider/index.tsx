@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+
 import { Autoplay, Pagination, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 

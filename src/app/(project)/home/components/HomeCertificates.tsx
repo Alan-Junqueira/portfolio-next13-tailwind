@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { HomeTitle } from './HomeTitle'
 
+import { HomeTitle } from './HomeTitle'
 
 export const HomeCertificates = () => {
   return (

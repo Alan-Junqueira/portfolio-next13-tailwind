@@ -1,14 +1,16 @@
 'use client'
 
-import { useSignInWithGoogle, useSignOut } from 'react-firebase-hooks/auth'
-
-import { auth, firestore } from '@/libs/firebase'
-import { useEffect, useState } from 'react'
-import { User } from 'firebase/auth'
-import { doc, setDoc } from 'firebase/firestore'
 import { useRouter } from 'next/navigation'
+
+import { useEffect, useState } from 'react'
+import { useSignInWithGoogle, useSignOut } from 'react-firebase-hooks/auth'
 import { FcGoogle } from 'react-icons/fc'
 import { ImSpinner } from 'react-icons/im'
+
+import { User } from 'firebase/auth'
+import { doc, setDoc } from 'firebase/firestore'
+
+import { auth, firestore } from '@/libs/firebase'
 
 export const Oauth = () => {
   const [loginError, setLoginError] = useState('')

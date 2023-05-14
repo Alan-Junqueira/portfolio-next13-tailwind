@@ -1,7 +1,9 @@
 import Image from 'next/image'
+
 import React from 'react'
-import { HomeTitle } from './HomeTitle'
+
 import { HomeTechHighlight } from './HomeTechHighlight'
+import { HomeTitle } from './HomeTitle'
 
 export const HomeTechStack = () => {
   return (

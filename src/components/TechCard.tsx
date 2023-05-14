@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { HTMLAttributes } from 'react'
 
+import { HTMLAttributes } from 'react'
 import { AiFillHtml5, AiFillGithub } from 'react-icons/ai'
 import {
   DiCss3,

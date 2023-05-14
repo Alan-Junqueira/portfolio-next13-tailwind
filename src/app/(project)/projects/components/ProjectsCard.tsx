@@ -1,10 +1,15 @@
+import Image from 'next/image'
+
 import React, { HTMLAttributes } from 'react'
+
+import dayjs from 'dayjs'
+
 import { ProjectsCardLinks } from './ProjectsCardLinks'
 import { ProjectsCardTechs } from './ProjectsCardTechs'
-import Image from 'next/image'
 import { ProjectsPortfolioAccordion } from './ProjectsPortfolioAccordion'
+
 import { TPortfolio } from '@/@types/Portfolio'
-import dayjs from 'dayjs'
+
 
 interface IProjectsCard extends HTMLAttributes<HTMLDivElement> {
   project: TPortfolio

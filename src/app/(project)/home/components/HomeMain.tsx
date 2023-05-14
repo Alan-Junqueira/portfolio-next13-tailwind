@@ -1,13 +1,17 @@
 import Image from 'next/image'
-import dayjs from 'dayjs'
+
 import { HiHomeModern } from 'react-icons/hi2'
 import { SlCalender } from 'react-icons/sl'
+
+import dayjs from 'dayjs'
+
+import { LinkDownloadCv }
+  from '../../../../components/LinkDoneloadCv'
 
 import { DevAnimation } from '@/components/DevAnimation'
 import { LinkContact } from '@/components/LinkContact'
 import { SocialsHeader } from '@/components/SocialsHeader'
-import { LinkDownloadCv }
-  from '../../../../components/LinkDoneloadCv'
+
 
 export const HomeMain = () => {
   const birth: string = "1995-07-24"

@@ -1,9 +1,12 @@
-import { TPortfolio } from '@/@types/Portfolio'
-import { firestore } from '@/libs/firebase'
 import { query, collection, orderBy, limit, getDocs } from 'firebase/firestore'
-import { ProjectsPagination } from './components/ProjectsPagination'
+
 import { ProjectsCard } from './components/ProjectsCard'
 import { ProjectsMain } from './components/ProjectsMain'
+import { ProjectsPagination } from './components/ProjectsPagination'
+
+import { firestore } from '@/libs/firebase'
+
+import { TPortfolio } from '@/@types/Portfolio'
 
 const getProjects = async (limitReturn: number): Promise<TPortfolio[]> => {
   const portfolioQuery = query(
@@ -42,7 +45,7 @@ export default async function Projects() {
 
   return (
     <>
-      <ProjectsMain totalProjects={totalProjects}/>
+      <ProjectsMain totalProjects={totalProjects} />
       <div className="grid grid-cols-1 md:grid-cols-2 sm:px-4 md:gap-4">
         {projects.map((project) => (
           <ProjectsCard

@@ -2,6 +2,7 @@
 
 import Link, { LinkProps } from 'next/link'
 import { usePathname } from 'next/navigation'
+
 import React, { useState } from 'react'
 
 interface INavItem extends LinkProps {
@@ -40,9 +41,8 @@ export const NavItem = ({ text, ...props }: INavItem) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
-        className={`absolute inset-0 ${
-          isHovered && 'bg-fuchsia-700'
-        }  content-[''] z-[-1] rounded h-4/6 mt-[9px] ease-in duration-300`}
+        className={`absolute inset-0 ${isHovered && 'bg-fuchsia-700'
+          }  content-[''] z-[-1] rounded h-4/6 mt-[9px] ease-in duration-300`}
       ></div>
       {text}
     </Link>

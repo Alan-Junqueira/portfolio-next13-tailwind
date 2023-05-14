@@ -1,7 +1,8 @@
 'use client'
 
-import * as Accordion from '@radix-ui/react-accordion'
 import { GoChevronDown } from 'react-icons/go'
+
+import * as Accordion from '@radix-ui/react-accordion'
 
 interface IProjectsPortfolioAccordion {
   description: string

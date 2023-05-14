@@ -1,5 +1,6 @@
-import { FormProps } from '@/@types/form'
 import emailjs from '@emailjs/browser'
+
+import { FormProps } from '@/@types/form'
 
 export const emailJsInstance = {
   sendEmail: async ({

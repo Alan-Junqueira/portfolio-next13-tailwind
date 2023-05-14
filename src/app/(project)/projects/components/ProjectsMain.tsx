@@ -1,11 +1,13 @@
 import Image from 'next/image'
 
-import { LinkContact } from '@/components/LinkContact'
-import { LinkDownloadCv }
-  from '../../../../components/LinkDoneloadCv'
 import { HTMLAttributes } from 'react'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
+
 import { ProjectsTechHighlight } from './ProjectsTechHighlight'
+
+import { LinkContact } from '@/components/LinkContact'
+import { LinkDownloadCv }
+  from '@/components/LinkDoneloadCv'
 
 interface IProjectsMain extends HTMLAttributes<HTMLElement> {
   totalProjects: number

@@ -1,15 +1,17 @@
 /* eslint-disable prettier/prettier */
 'use client'
 
-import { useBurgerMenuStore } from '@/store/burgerStore'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BiMenu, BiMenuAltRight } from 'react-icons/bi'
+import { usePathname } from 'next/navigation'
+
+import { useEffect } from 'react'
 import { AiOutlineHome } from 'react-icons/ai'
+import { BiMenu, BiMenuAltRight } from 'react-icons/bi'
 import { FiBriefcase } from 'react-icons/fi'
 import { RiContactsLine } from 'react-icons/ri'
-import { usePathname } from 'next/navigation'
-import { useEffect } from 'react'
+
+import { useBurgerMenuStore } from '@/store/burgerStore'
 
 export const MenuBurger = () => {
   const {
@@ -58,7 +60,7 @@ export const MenuBurger = () => {
           </div>
           <div className="flex flex-col">
             <Link
-            onClick={toggleMenuBurger}
+              onClick={toggleMenuBurger}
               href="/"
               className={`
                 flex justify-between 
@@ -73,7 +75,7 @@ export const MenuBurger = () => {
               Início
             </Link>
             <Link
-            onClick={toggleMenuBurger}
+              onClick={toggleMenuBurger}
               href="/projects"
               className={`
                 flex justify-between 
@@ -88,7 +90,7 @@ export const MenuBurger = () => {
               Projetos
             </Link>
             <Link
-            onClick={toggleMenuBurger}
+              onClick={toggleMenuBurger}
               href="/contact"
               className={`
                 flex justify-between 

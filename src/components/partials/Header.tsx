@@ -1,6 +1,9 @@
 import Image from 'next/image'
+
 import React from 'react'
+
 import { NavItem } from '../NavItem'
+
 import { MenuBurger } from './MenuBurger'
 
 export const Header = () => {

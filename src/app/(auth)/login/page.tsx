@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+
 import { Oauth } from './components/Oauth'
 
 export const metadata: Metadata = {

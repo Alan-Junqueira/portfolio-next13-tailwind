@@ -1,8 +1,34 @@
 {
   "extends": ["next/core-web-vitals", "@rocketseat/eslint-config/react"],
+  "plugins": ["eslint-plugin-import-helpers"],
   "rules": {
-    "camelcase": ["error", {"allow": ["IBM_Plex_Mono"]}],
+    "camelcase": ["error", { "allow": ["IBM_Plex_Mono"] }],
     "react/no-unescaped-entities": "off",
-    "prettier/prettier": "off"
+    "prettier/prettier": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^next/",
+          "/^react/",
+          "/^zod/",
+          "module",
+          "parent",
+          "sibling",
+          "/^@/components/",
+          "/^@/libs/",
+          "/^@/store/",
+          "/^@/hooks/",
+          "/^@/@types/",
+          "index"
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.spec.js"] }
+    ]
   }
 }

@@ -117,7 +117,7 @@ export const Form = () => {
             <Label htmlFor="fromName">Nome</Label>
             <Input
               type="text"
-              placeholder="Ex. Jhon"
+              placeholder="Digite seu nome"
               id="fromName"
               {...register('fromName')}
             />
@@ -129,7 +129,7 @@ export const Form = () => {
             <Label htmlFor="fromLastName">Sobrenome</Label>
             <Input
               type="text"
-              placeholder="Ex. Doe"
+              placeholder="Digite seu sobrenome"
               id="fromLastName"
               {...register('fromLastName')}
             />
@@ -141,7 +141,7 @@ export const Form = () => {
             <Label htmlFor="fromEmail">Email</Label>
             <Input
               type="text"
-              placeholder="Ex. jhondoe@example.com"
+              placeholder="Digite seu melhor email"
               id="fromEmail"
               {...register('fromEmail')}
             />
@@ -158,7 +158,7 @@ export const Form = () => {
               bg-transparent
               py-2
             "
-              placeholder="Mensagem com no mínimo 30 caracteres"
+              placeholder="Digite uma mensagem com no mínimo 30 caracteres"
               rows={4}
               id="fromMessage"
               {...register('fromMessage')}

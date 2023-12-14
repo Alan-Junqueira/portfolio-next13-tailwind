@@ -138,30 +138,6 @@ export const Footer = () => {
             '
         />
       </Link>
-      <Link
-        href="https://www.facebook.com/Allann.Junnkh"
-        target="_blank"
-        className="
-          flex items-center gap-1
-          text-xs text-gray-200 hover:text-blue-600
-          group
-        "
-      >
-        <span
-          className='
-            hidden md:block 
-            transition-all ease-in duration-200
-          '
-        >
-          Facebook
-        </span>
-        <FaFacebookF
-          className='
-              md:opacity-0 md:group-hover:opacity-100 
-              text-lg md:text-xs
-            '
-        />
-      </Link>
       <div className='w-full h-1 bg-gradient-to-br from-fuchsia-700 to-pink-500 rounded-l-lg animate-pulse'></div>
     </footer>
   )

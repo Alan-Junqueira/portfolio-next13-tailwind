@@ -1,13 +1,6 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaWhatsapp,
-  FaTwitter,
-  FaLinkedinIn,
-  FaGithub,
-} from 'react-icons/fa'
+import { FaInstagram, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 export const SocialsHeader = () => {
   return (
@@ -26,7 +19,7 @@ export const SocialsHeader = () => {
             hover:before:-top-2 hover:before:bottom-0 hover:before:right-10
             hover:before:bg-black hover:before:bg-opacity-70 hover:before:text-blue-600
             hover:before:rounded-ss-xl hover:before:rounded-ee-xl
-            
+
           "
         >
           <FaLinkedinIn className="text-gray-200 hover:text-blue-600 ease-in duration-300 " />
@@ -63,7 +56,7 @@ export const SocialsHeader = () => {
         >
           <FaGithub className="text-gray-200 hover:text-neutral-950 ease-in duration-300" />
         </Link>
-        <Link
+        {/* <Link
           href="https://wa.me/64992391327"
           target="_blank"
           className="
@@ -78,7 +71,7 @@ export const SocialsHeader = () => {
           "
         >
           <FaWhatsapp className="text-gray-200 hover:text-emerald-600 ease-in duration-300" />
-        </Link>
+        </Link> */}
         <Link
           href="https://twitter.com/_alanjunqueira"
           target="_blank"
@@ -95,7 +88,7 @@ export const SocialsHeader = () => {
         >
           <FaTwitter className="text-gray-200 hover:text-blue-600 ease-in duration-300" />
         </Link>
-        <Link
+        {/* <Link
           href="https://www.facebook.com/Allann.Junnkh"
           target="_blank"
           className="
@@ -110,9 +103,9 @@ export const SocialsHeader = () => {
           "
         >
           <FaFacebookF className="text-gray-200 hover:text-blue-600 ease-in duration-300" />
-        </Link>
+        </Link> */}
       </div>
       <div className="h-[3px] w-full sm:w-[3px] sm:h-full bg-fuchsia-700 ml-1 sm:ml-0 sm:mt-2 rounded-lg"></div>
     </>
-  )
-}
+  );
+};
